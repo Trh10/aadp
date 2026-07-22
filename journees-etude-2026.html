@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programme détaillé — Journées d'Étude 2026</title>
+<style>
+:root{
+  --bordeaux:#43191A;
+  --bordeaux-2:#5C2323;
+  --or:#C9932B;
+  --or-clair:#E0AE45;
+  --ivoire:#FAF6EF;
+  --blanc:#fff;
+  --grain:#F3ECDF;
+  --encre:#221C18;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--ivoire);
+  color:var(--encre);
+  line-height:1.6;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--bordeaux);color:#EAD9C4;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:.45rem;padding-bottom:.45rem;gap:1rem}
+header.site{
+  background:var(--blanc);
+  border-bottom:1px solid rgba(67,25,26,.14);
+  position:sticky;top:0;z-index:50;
+}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center;gap:1rem}
+.brand img{height:72px;width:auto;display:block}
+.hero{
+  background:linear-gradient(160deg,var(--bordeaux) 0%,#351314 60%,#2A0F10 100%);
+  color:var(--blanc);
+  padding:4.5rem 0 3rem;
+}
+.hero h1{font-size:clamp(2.2rem,4vw,3.4rem);margin:0 0 1rem;font-family:Georgia,serif}
+.hero p{max-width:72ch;margin:0 0 1.5rem}
+.hero .tag{display:inline-block;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+main{padding:3rem 0 5rem}
+.card{background:var(--blanc);border:1px solid rgba(67,25,26,.08);border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:1.6rem}
+section + section{margin-top:2rem}
+section h2{margin:0 0 1rem;font-size:1.65rem;color:var(--bordeaux);font-family:Georgia,serif}
+.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700;color:var(--or);margin-bottom:.5rem}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.day{background:var(--grain);border-radius:14px;padding:1rem}
+.day strong{display:block;color:var(--bordeaux);margin-bottom:.35rem}
+.day span{font-size:.9rem;color:#5c4c43}
+.agenda{display:grid;gap:1rem}
+.session{background:#fff;border-left:4px solid var(--or);padding:1rem 1rem 1rem 1.15rem;border-radius:12px}
+.session .time{font-weight:700;color:var(--bordeaux)}
+.session .type{font-weight:700;color:var(--or);text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;margin-bottom:.35rem}
+.btn{
+  display:inline-block;background:var(--or);color:var(--bordeaux);font-weight:700;
+  padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;
+}
+.btn.light{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff}
+.muted{color:#665d54}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.}
+@media (max-width:640px){.grid{grid-template-columns:1fr}.}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <span>Académie Africaine de Droit Public</span>
+    <div class="right"><a href="mailto:contact@aadp-afrique.org">contact@aadp-afrique.org</a><span>Kinshasa · RD Congo</span></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/img/logo_noire.png" alt="Logo AADP">
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="tag">Journées d'Étude 2026</div>
+    <h1>Programme détaillé</h1>
+    <p>
+      Cinq journées, une progression pédagogique. Articulé autour des étapes Comprendre · Comparer · Réformer · Négocier · Proposer,
+      le programme combine approches théoriques et exercices pratiques, de l'analyse des dynamiques constitutionnelles à la formulation
+      de propositions concrètes de réforme.
+    </p>
+    <a class="btn light" href="mailto:contact@aadp-afrique.org?subject=Inscription%20aux%20Journ%C3%A9es%20d'%C3%89tude%202026">S'inscrire</a>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <section>
+      <div class="kicker">Programme</div>
+      <h2>Progression pédagogique de la semaine</h2>
+      <div class="grid">
+        <div class="day"><strong>Journée 1 · 7 sept.</strong><span>Comprendre</span></div>
+        <div class="day"><strong>Journée 2 · 8 sept.</strong><span>Comparer</span></div>
+        <div class="day"><strong>Journée 3 · 9 sept.</strong><span>Réformer</span></div>
+        <div class="day"><strong>Journée 4 · 10 sept.</strong><span>Négocier</span></div>
+        <div class="day"><strong>Journée 5 · 11 sept.</strong><span>Proposer</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Journée 1</div>
+      <h2>Comprendre</h2>
+      <div class="agenda">
+        <div class="session"><div class="time">09h00 – 10h00</div><div class="type">Cérémonie</div><div>Cérémonie d'ouverture</div><div class="muted">Autorités envisagées : Président de l'Assemblée nationale, Première Ministre, Président de la Cour constitutionnelle.</div></div>
+        <div class="session"><div class="time">10h00 – 11h30</div><div class="type">Master class</div><div>Trente ans de réformes constitutionnelles en Afrique : bilan et perspectives</div><div class="muted">Pr. Abdoulaye Soma</div></div>
+        <div class="session"><div class="time">11h45 – 13h15</div><div class="type">Master class</div><div>Les réformes constitutionnelles en Afrique : entre succès et échec</div><div class="muted">Pr. Oumarou Narey</div></div>
+        <div class="session"><div class="time">14h30 – 16h00</div><div class="type">Master class</div><div>Cartographie des réformes constitutionnelles africaines depuis 1990</div><div class="muted">Pr. Evariste Boshab</div></div>
+        <div class="session"><div class="time">16h15 – 17h30</div><div class="type">Atelier pratique</div><div>Atelier sur les réformes constitutionnelles — Études de cas : Côte d'Ivoire, Congo-Brazzaville, RCA, Togo</div><div class="muted">Groupes dirigés par Pr. Marcel Wetsh'Okonda (Kinshasa), Pr. Trésor Makunya (Prétoria), Me Chancel Funga (Nice), Dr. Elysée Hator (Paris-Saclay)</div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="kicker">Inscription</div>
+      <h2>Tu peux t'inscrire</h2>
+      <p>
+        Pour demander votre participation aux Journées d'Étude 2026, contactez l'équipe de l'AADP
+        par e-mail et précisez votre statut, votre institution et votre intérêt pour le programme.
+      </p>
+      <a class="btn" href="mailto:contact@aadp-afrique.org?subject=Inscription%20aux%20Journ%C3%A9es%20d'%C3%89tude%202026">Envoyer une demande d'inscription</a>
+    </section>
+  </div>
+</main>
+</body>
+</html>

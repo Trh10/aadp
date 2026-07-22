@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AADP — Académie Africaine de Droit Public</title>
+<meta name="description" content="L'Académie Africaine de Droit Public (AADP) est l'espace scientifique de référence consacré au droit public en Afrique francophone : formation, réflexion, publications et dialogue entre universitaires, magistrats et décideurs.">
+<meta property="og:title" content="Académie Africaine de Droit Public — AADP">
+<meta property="og:description" content="Une plateforme panafricaine de réflexion sur le droit public, le constitutionnalisme et l'État de droit en Afrique francophone.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#43191A">
+<link rel="icon" type="image/png" href="assets/img/logo_noire.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bordeaux:#43191A;
+  --bordeaux-2:#5C2323;
+  --bordeaux-3:#7A2C2C;
+  --or:#C9932B;
+  --or-clair:#E0AE45;
+  --ivoire:#FAF6EF;
+  --ivoire-2:#F3ECDF;
+  --encre:#221C18;
+  --gris:#6E635B;
+  --blanc:#FFFFFF;
+  --trait:rgba(67,25,26,.14);
+  --maxw:1180px;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Public Sans",system-ui,sans-serif;
+  color:var(--encre);
+  background:var(--ivoire);
+  line-height:1.65;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:"Marcellus",serif;font-weight:400;line-height:1.15;letter-spacing:.01em}
+h2{font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--bordeaux)}
+h3{font-size:1.25rem;color:var(--bordeaux)}
+p{max-width:68ch}
+
+/* ---------- eyebrow / section label ---------- */
+.eyebrow{
+  display:flex;align-items:center;gap:.7rem;
+  font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--or);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--or)}
+.diamond{color:var(--or)}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--bordeaux);color:#EAD9C4;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:.45rem;padding-bottom:.45rem;gap:1rem}
+.topbar a:hover{color:var(--or-clair)}
+.topbar .right{display:flex;gap:1.4rem;white-space:nowrap}
+
+/* ---------- header ---------- */
+header.site{
+  background:var(--blanc);
+  border-bottom:1px solid var(--trait);
+  position:sticky;top:0;z-index:50;
+}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center}
+.brand img{height:72px;width:auto;display:block}
+nav.main{display:flex;align-items:center;gap:1.6rem;font-size:.9rem;font-weight:600}
+nav.main a{color:var(--encre);padding:.35rem 0;border-bottom:2px solid transparent;transition:.2s}
+nav.main a:hover{color:var(--bordeaux);border-color:var(--or)}
+.btn{
+  display:inline-block;background:var(--bordeaux);color:#fff;font-weight:600;
+  padding:.72rem 1.5rem;border-radius:999px;border:1px solid var(--bordeaux);
+  transition:.2s;font-size:.92rem;cursor:pointer;
+}
+.btn:hover{background:var(--bordeaux-3)}
+.btn.gold{background:var(--or);border-color:var(--or);color:var(--bordeaux)}
+.btn.gold:hover{background:var(--or-clair)}
+.btn.ghost{background:transparent;color:var(--bordeaux)}
+.btn.ghost:hover{background:var(--bordeaux);color:#fff}
+.btn.ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost-light:hover{background:rgba(255,255,255,.12)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:.4rem}
+.burger span{display:block;width:24px;height:2px;background:var(--bordeaux);margin:5px 0;transition:.25s}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(ellipse at 78% 40%, rgba(201,147,43,.22), transparent 55%),
+    linear-gradient(160deg, var(--bordeaux) 0%, #351314 60%, #2A0F10 100%);
+  color:#F5EBDD;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{ /* fine double rule, diploma-like */
+  content:"";position:absolute;inset:14px;border:1px solid rgba(201,147,43,.35);
+  pointer-events:none;border-radius:6px;
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;
+  padding-top:5rem;padding-bottom:5rem;position:relative;z-index:1;
+}
+.hero .eyebrow{color:var(--or-clair)}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);color:#fff;margin-bottom:1.2rem}
+.hero h1 em{font-style:normal;color:var(--or-clair)}
+.hero p.lead{font-size:1.08rem;color:#E8D9C6;margin-bottom:2rem;max-width:56ch}
+.hero .cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero .art{position:relative;display:flex;justify-content:center}
+.hero .art img{
+  width:min(430px,100%);
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));
+  animation:float 7s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media (prefers-reduced-motion:reduce){.hero .art img{animation:none}}
+.hero .devise{
+  margin-top:2.4rem;padding-top:1.4rem;
+  display:flex;gap:2.5rem;flex-wrap:wrap;font-size:.85rem;color:#D8C4AB;
+}
+.hero .devise b{display:block;font-family:"Marcellus",serif;font-size:1.05rem;color:var(--or-clair);font-weight:400;letter-spacing:.05em}
+
+/* ---------- vidéo d'actualité ---------- */
+.video-actu{padding:0;background:#000}
+.video-frame{position:relative;width:100%;height:min(78vh,620px);overflow:hidden}
+.video-frame video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  background:#2A0F10;
+}
+.video-overlay{
+  position:absolute;inset:0;display:flex;align-items:center;
+  background:linear-gradient(90deg, rgba(42,15,16,.85) 0%, rgba(42,15,16,.55) 55%, rgba(42,15,16,.25) 100%);
+}
+.video-overlay .wrap{width:100%;position:relative;z-index:2}
+.video-overlay .eyebrow::before{display:none}
+.video-overlay h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.video-actu::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:0;background:transparent;z-index:3;
+}
+@media (max-width:720px){
+  .video-frame{height:min(70vh,520px)}
+}
+
+/* ---------- generic section ---------- */
+section{padding:5.5rem 0}
+section.alt{background:var(--blanc);border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.sec-head{max-width:760px;margin-bottom:3rem}
+.sec-head p{color:var(--gris);margin-top:1rem}
+
+/* ---------- présentation ---------- */
+.presentation .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.presentation .colB{border-left:2px solid var(--or);padding-left:2rem}
+.presentation .colB p{color:#3D342E;margin-bottom:1.1rem}
+.quote{
+  margin-top:2rem;background:var(--ivoire-2);border-radius:var(--r);
+  padding:1.6rem 1.8rem;font-family:"Marcellus",serif;font-size:1.15rem;color:var(--bordeaux);
+  position:relative;
+}
+.quote::before{content:"“";position:absolute;top:-4px;left:14px;font-size:3.2rem;color:var(--or);line-height:1}
+.quote span{display:block;margin-top:.8rem;font-family:"Public Sans";font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gris)}
+
+/* ---------- mission cards ---------- */
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.card{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:var(--r);
+  padding:2rem 1.8rem;transition:.25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(67,25,26,.1);border-color:var(--or)}
+.card .ic{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:var(--ivoire-2);color:var(--or);font-size:1.2rem;margin-bottom:1.1rem;
+  border:1px solid rgba(201,147,43,.4);
+}
+.card h3{margin-bottom:.6rem}
+.card p{font-size:.94rem;color:var(--gris)}
+
+/* ---------- objectifs ---------- */
+.obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.obj{
+  background:var(--ivoire-2);border-radius:var(--r);padding:1.7rem 1.6rem;
+  border-top:3px solid var(--or);
+}
+.obj h3{font-size:1.05rem;margin-bottom:.5rem}
+.obj p{font-size:.9rem;color:var(--gris)}
+
+/* ---------- gouvernance ---------- */
+.organes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:3.2rem}
+.organe{
+  background:linear-gradient(160deg,var(--bordeaux),var(--bordeaux-2));
+  color:#F1E4D2;border-radius:var(--r);padding:2rem 1.8rem;
+}
+.organe h3{color:var(--or-clair);margin-bottom:.6rem}
+.organe p{font-size:.92rem;color:#DECBB4}
+.membres{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.membre{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:var(--r);
+  padding:1.6rem 1.4rem;text-align:center;transition:.25s;
+}
+.membre:hover{border-color:var(--or);box-shadow:0 14px 30px rgba(67,25,26,.08)}
+.membre .avatar{
+  width:82px;height:82px;border-radius:50%;margin:0 auto 1rem;
+  background:radial-gradient(circle at 35% 30%,var(--or-clair),var(--or) 60%,#9A6E1D);
+  display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1.5rem;color:var(--bordeaux);
+  border:3px solid var(--ivoire-2);outline:1px solid rgba(201,147,43,.5);
+}
+.membre b{display:block;font-family:"Marcellus",serif;font-weight:400;font-size:1.02rem;color:var(--bordeaux)}
+.membre span{font-size:.8rem;color:var(--gris);display:block;margin-top:.25rem}
+.note{font-size:.83rem;color:var(--gris);margin-top:1.6rem;font-style:italic}
+
+/* ---------- axes ---------- */
+.axes{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.axe{
+  display:flex;gap:1.3rem;background:var(--blanc);border:1px solid var(--trait);
+  border-radius:var(--r);padding:1.6rem 1.7rem;transition:.25s;align-items:flex-start;
+}
+.axe:hover{border-color:var(--or);transform:translateX(4px)}
+.axe .pin{
+  flex:0 0 auto;width:14px;height:14px;transform:rotate(45deg);
+  background:var(--or);margin-top:.45rem;border-radius:2px;
+}
+.axe h3{font-size:1.08rem;margin-bottom:.35rem}
+.axe p{font-size:.9rem;color:var(--gris)}
+
+/* ---------- contributions ---------- */
+.contrib .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:start}
+.contrib{background:linear-gradient(180deg,var(--ivoire) 0%,var(--ivoire-2) 100%)}
+.contrib .steps{margin-top:1.8rem;display:grid;gap:1rem}
+.step{display:flex;gap:1rem;align-items:flex-start}
+.step .n{
+  flex:0 0 34px;height:34px;border-radius:50%;background:var(--bordeaux);color:var(--or-clair);
+  display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1rem;
+}
+.step p{font-size:.93rem;color:#3D342E}
+.step p b{color:var(--bordeaux)}
+form.panel{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:var(--r);
+  padding:2.2rem;box-shadow:0 24px 60px rgba(67,25,26,.08);
+}
+form.panel h3{margin-bottom:1.4rem}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bordeaux);margin-bottom:.35rem}
+.field input,.field select,.field textarea{
+  width:100%;padding:.75rem .9rem;border:1px solid var(--trait);border-radius:9px;
+  font:inherit;font-size:.95rem;background:var(--ivoire);color:var(--encre);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--or);border-color:var(--or)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-ok{
+  display:none;background:#F0F7EF;border:1px solid #9CC49A;color:#2C5A2A;
+  border-radius:10px;padding:1rem 1.2rem;margin-top:1rem;font-size:.93rem;
+}
+.hint{font-size:.78rem;color:var(--gris);margin-top:.8rem}
+
+/* ---------- événement ---------- */
+.event-card{
+  display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;
+  background:linear-gradient(150deg,var(--bordeaux) 0%,#301112 100%);color:#F1E4D2;
+  border:1px solid rgba(201,147,43,.4);
+}
+.event-card .info{padding:3rem}
+.event-card .info .eyebrow{color:var(--or-clair)}
+.event-card h3{font-size:clamp(1.5rem,2.6vw,2.1rem);color:#fff;margin-bottom:1rem}
+.event-card p{color:#DECBB4;margin-bottom:1.6rem;font-size:.97rem}
+.event-card .meta{display:grid;gap:.5rem;margin-bottom:2rem;font-size:.92rem}
+.event-card .meta div::before{content:"◆";color:var(--or);margin-right:.6rem;font-size:.7rem}
+.event-card .visual{
+  background:radial-gradient(circle at 50% 45%,rgba(201,147,43,.35),transparent 65%),#2A0F10;
+  display:grid;place-items:center;padding:2rem;
+}
+.event-card .visual img{width:min(320px,90%);filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+
+/* ---------- partenaires ---------- */
+.partners{display:flex;justify-content:center;gap:3.5rem;flex-wrap:wrap;text-align:center}
+.partner{max-width:230px}
+.partner .seal{
+  width:74px;height:74px;margin:0 auto 1rem;border-radius:50%;
+  border:2px solid var(--or);display:grid;place-items:center;
+  font-family:"Marcellus",serif;font-size:1.15rem;color:var(--bordeaux);background:var(--blanc);
+}
+.partner b{display:block;font-family:"Marcellus",serif;font-weight:400;color:var(--bordeaux)}
+.partner span{font-size:.82rem;color:var(--gris)}
+
+/* ---------- CTA final ---------- */
+.cta-final{
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(201,147,43,.18), transparent 55%),
+    linear-gradient(150deg,var(--bordeaux),#2E1011);
+  color:#fff;text-align:center;
+}
+.cta-final h2{color:#fff}
+.cta-final p{margin:1.2rem auto 2.2rem;color:#E4D3BE;max-width:60ch}
+.cta-final .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer{background:#2A0F10;color:#C9B29A;font-size:.9rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding-top:4rem;padding-bottom:3rem}
+footer img{height:52px;width:auto;margin-bottom:1rem}
+footer h4{font-family:"Marcellus",serif;font-weight:400;color:var(--or-clair);margin-bottom:1rem;letter-spacing:.04em}
+footer ul{list-style:none}
+footer li{margin-bottom:.55rem}
+footer a:hover{color:var(--or-clair)}
+.footline{border-top:1px solid rgba(201,147,43,.25)}
+.footline .wrap{display:flex;justify-content:space-between;gap:1rem;padding-top:1.2rem;padding-bottom:1.2rem;font-size:.8rem;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero .wrap{grid-template-columns:1fr;text-align:left}
+  .hero .art{order:-1}
+  .hero .art img{width:min(300px,70%)}
+  .presentation .wrap,.contrib .wrap{grid-template-columns:1fr;gap:2.5rem}
+  .tri,.obj-grid,.organes{grid-template-columns:1fr 1fr}
+  .membres{grid-template-columns:1fr 1fr}
+  .axes{grid-template-columns:1fr}
+  .event-card{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  nav.main{
+    display:none;position:absolute;top:100%;left:0;right:0;background:var(--blanc);
+    flex-direction:column;align-items:flex-start;padding:1.2rem 24px 1.6rem;gap:1rem;
+    border-bottom:1px solid var(--trait);box-shadow:0 20px 40px rgba(0,0,0,.08);
+  }
+  nav.main.open{display:flex}
+  .burger{display:block}
+  .topbar .right span:last-child{display:none}
+  .tri,.obj-grid,.organes,.membres{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  section{padding:3.8rem 0}
+  footer .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Bandeau supérieur -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Académie Africaine de Droit Public</span>
+    <div class="right">
+      <a href="mailto:contact@afdp.com">contact@afdp.com</a>
+      <span>Kinshasa · RD Congo</span>
+    </div>
+  </div>
+</div>
+
+<!-- En-tête -->
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="Accueil AADP">
+      <img src="assets/img/logo_noire.png" alt="Académie Africaine de Droit Public">
+    </a>
+    <nav class="main" id="nav">
+      <a href="#academie">À propos</a>
+      <a href="#axes">Axes de réflexion</a>
+      <a href="#contribuer">Devenir membre</a>
+      <a href="#reflexion">Soumettre votre réflexion</a>
+      <a href="#evenements">Événements</a>
+      <a class="btn gold" href="#contribuer">Faire un don</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HÉRO institutionnel -->
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Afrique francophone · Droit public</div>
+      <h1>L'espace scientifique de référence du <em>droit public africain</em>.</h1>
+      <p class="lead">
+        L'Académie Africaine de Droit Public réunit universitaires, magistrats, hauts
+        fonctionnaires et décideurs autour d'une même ambition : penser, comparer et
+        accompagner les transformations de l'État et du constitutionnalisme sur le continent.
+      </p>
+      <div class="cta">
+        <a class="btn gold" href="#academie">Découvrir l'Académie</a>
+        <a class="btn ghost-light" href="#reflexion">Soumettre une réflexion</a>
+      </div>
+      <div class="devise">
+        <div><b>Comprendre</b>les dynamiques institutionnelles</div>
+        <div><b>Comparer</b>les expériences africaines</div>
+        <div><b>Proposer</b>des réformes crédibles</div>
+      </div>
+    </div>
+    <div class="art">
+      <img src="assets/img/carte_afrique_avec_elemant_de_la_cour.png"
+           alt="Carte de l'Afrique dorée portant une balance de la justice, emblème de l'AADP">
+    </div>
+  </div>
+</section>
+
+<!-- Vidéo d'actualité (boucle) -->
+<section class="video-actu" id="actualite" aria-label="Vidéo d'actualité de l'Académie">
+  <div class="video-frame">
+    <video autoplay muted loop playsinline poster="assets/img/carte_afrique_avec_elemant_de_la_cour.png">
+      <source src="assets/video/AADP%20Teaser%20Journ%C3%A9e%20des%20%C3%A9tudes%20Ed1%202026.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay">
+      <div class="wrap" style="text-align:center">
+        <div class="eyebrow" style="color:var(--or-clair);justify-content:center">À la une</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L'ACADÉMIE -->
+<section id="academie" class="presentation">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Qui sommes-nous</div>
+      <h2>Une académie au service de l'État de droit en Afrique.</h2>
+      <div class="quote">
+        Un rendez-vous scientifique majeur pour penser l'avenir constitutionnel du continent.
+        <span>Ambition de l'AADP</span>
+      </div>
+    </div>
+    <div class="colB reveal">
+      <p>
+        L'<strong>Académie Africaine de Droit Public (AADP)</strong> réunit universitaires,
+        magistrats, hauts fonctionnaires et responsables publics autour d'une même exigence :
+        doter le continent d'un espace scientifique consacré à la conduite des réformes
+        constitutionnelles. Sa première édition des <em>Journées d'Étude</em> inaugure un
+        rendez-vous appelé à faire référence.
+      </p>
+      <p>
+        Depuis 2020, l'Afrique connaît une séquence politique et institutionnelle
+        exceptionnelle. Coups d'État, transitions politiques, référendums constitutionnels
+        et débats sur la limitation des mandats témoignent de l'actualité brûlante de la
+        question constitutionnelle. La Constitution demeure un instrument privilégié de
+        transformation de l'État, de régulation des conflits politiques et de recherche
+        de stabilité institutionnelle.
+      </p>
+      <p>
+        Cette actualité met en lumière le rôle croissant des juridictions constitutionnelles
+        — véritables gardiennes de l'ordre constitutionnel — comme l'ont illustré les crises
+        du Sénégal, du Kenya ou de la République démocratique du Congo. Pourtant, les espaces
+        de formation spécialisés consacrés aux réformes constitutionnelles demeurent rares.
+        L'Académie entend combler ce manque, en formant une nouvelle génération de décideurs
+        capables de conduire des réformes crédibles, inclusives et adaptées aux réalités
+        africaines.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALEURS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Notre raison d'être</div>
+      <h2>Mission, vision et valeurs.</h2>
+    </div>
+    <div class="tri">
+      <div class="card reveal">
+        <div class="ic">⚖</div>
+        <h3>Mission</h3>
+        <p>Produire et transmettre un savoir de haut niveau en droit public africain ; renforcer
+        les capacités des acteurs appelés à concevoir, conduire ou accompagner les réformes
+        institutionnelles du continent.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">◆</div>
+        <h3>Vision</h3>
+        <p>Devenir la plateforme panafricaine de référence où s'élabore la pensée constitutionnelle
+        de l'Afrique francophone — un lieu où la doctrine rencontre la pratique des institutions.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">✦</div>
+        <h3>Valeurs</h3>
+        <p>Rigueur scientifique, indépendance, esprit comparatiste, responsabilité publique,
+        éthique institutionnelle et attachement aux principes démocratiques et à l'État de droit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIFS -->
+<section id="objectifs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Objectifs</div>
+      <h2>Six engagements structurants.</h2>
+      <p>Les travaux de l'Académie — formations, journées d'étude, publications — poursuivent
+      six objectifs permanents.</p>
+    </div>
+    <div class="obj-grid">
+      <div class="obj reveal">
+        <h3>Analyser les dynamiques constitutionnelles</h3>
+        <p>Comprendre les processus de production, de révision et de transformation des
+        Constitutions africaines, et identifier les facteurs de réussite ou d'échec d'un
+        processus constituant.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Consolider l'État de droit</h3>
+        <p>Approfondir la compréhension des enjeux liés aux processus électoraux, à la
+        stabilité institutionnelle et à la consolidation de l'État de droit sur le continent.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Éclairer la justice constitutionnelle</h3>
+        <p>Examiner le rôle des juridictions constitutionnelles dans la régulation des rapports
+        de pouvoir et la protection des normes constitutionnelles.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Articuler droit interne et normes régionales</h3>
+        <p>Favoriser une meilleure compréhension des interactions entre les Constitutions
+        africaines, le droit international et les normes régionales de l'Union africaine.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Former une nouvelle génération de décideurs</h3>
+        <p>Renforcer les capacités des jeunes chercheurs, hauts fonctionnaires et responsables
+        publics, et contribuer à former des décideurs capables de mettre en œuvre des réformes
+        adaptées.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Diffuser une culture de gouvernance</h3>
+        <p>Encourager une culture de gouvernance constitutionnelle fondée sur la responsabilité
+        publique, l'éthique institutionnelle, la stabilité des institutions et le respect des
+        principes démocratiques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOUVERNANCE & MEMBRES -->
+<section id="gouvernance" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Gouvernance</div>
+      <h2>Les organes de l'Académie.</h2>
+      <p>L'AADP s'appuie sur une organisation collégiale qui garantit son indépendance
+      scientifique et la qualité de ses travaux.</p>
+    </div>
+    <div class="organes">
+      <div class="organe reveal">
+        <h3>Le Conseil scientifique</h3>
+        <p>Composé de professeurs et de praticiens de référence, il définit les orientations
+        académiques, valide les programmes et évalue les contributions soumises à l'Académie.</p>
+      </div>
+      <div class="organe reveal">
+        <h3>Le Secrétariat général</h3>
+        <p>Il assure la coordination des activités, l'organisation des journées d'étude et le
+        lien permanent avec les membres, les partenaires et les institutions.</p>
+      </div>
+      <div class="organe reveal">
+        <h3>Le Collège des membres</h3>
+        <p>Enseignants-chercheurs, magistrats, hauts fonctionnaires et jeunes chercheurs associés,
+        réunis en réseau à l'échelle du continent et de la diaspora.</p>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-bottom:2rem">
+      <h3 style="font-size:1.5rem">Réseau scientifique &amp; intervenants</h3>
+      <p style="color:var(--gris);margin-top:.6rem">Une réunion exceptionnelle de professeurs,
+      présidents de juridiction et experts venus de tout le continent et des grandes
+      universités partenaires.</p>
+    </div>
+    <div class="membres">
+      <div class="membre reveal">
+        <div class="avatar">BT</div>
+        <b>Pr. Blaise Tchikaya</b>
+        <span>Président de la Cour africaine des droits de l'homme et des peuples</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">EB</div>
+        <b>Pr. Évariste Boshab</b>
+        <span>Ancien Vice-Premier ministre · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">AS</div>
+        <b>Pr. Abdoulaye Soma</b>
+        <span>Constitutionnaliste · Burkina Faso</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">ON</div>
+        <b>Pr. Oumarou Narey</b>
+        <span>Université de Niamey · Niger</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">JLE</div>
+        <b>Pr. Jean-Louis Esambo</b>
+        <span>Université de Kinshasa · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">DK</div>
+        <b>Pr. Dieudonné Kaluba</b>
+        <span>Juge constitutionnel · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">JC</div>
+        <b>Pr. Jean-Pierre Camby</b>
+        <span>Université Paris-Saclay · France</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">PdM</div>
+        <b>Pr. Pierre de Montalivet</b>
+        <span>Université Paris-Est Créteil · France</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">MW</div>
+        <b>Pr. Marcel Wetsh'Okonda</b>
+        <span>Université de Kinshasa · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">TM</div>
+        <b>Pr. Trésor Makunya</b>
+        <span>Université de Prétoria · Afrique du Sud</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">EN</div>
+        <b>Pr. Éric Ngango</b>
+        <span>Université de Douala · Cameroun</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">KM</div>
+        <b>Pr. Kazadi Mpiana</b>
+        <span>Université Nouvelle Horizon · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">FB</div>
+        <b>Pr. François Bokona</b>
+        <span>Constitutionnaliste · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">JD</div>
+        <b>Pr. Jacques D'joli</b>
+        <span>Constitutionnaliste · RD Congo</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">SL</div>
+        <b>Pr. Sébastien Lath</b>
+        <span>Constitutionnaliste · Côte d'Ivoire</span>
+      </div>
+      <div class="membre reveal">
+        <div class="avatar">GB</div>
+        <b>Dr. Gilles Badet</b>
+        <span>Université d'Abomey-Calavi · Bénin</span>
+      </div>
+    </div>
+    <p class="note">◆ Et de nombreux autres universitaires et praticiens réunis dans les
+    séminaires, masterclass et ateliers — Dr. Guelord Luema (Paris-Est Créteil),
+    Dr. Amadou Imerane (Niamey), Me Chancel Funga (Nice), Dr. Élysée Hator (Paris-Saclay),
+    M. David Aloco (Bordeaux), Me Ronsard Malonda, Dr. Isaac Muzigwa (Toulon),
+    Dr. Puis D'joli (Paris 13), M. Jonas Tshibayi Ntumba (Strasbourg), Pr. Ngondankoy,
+    Pr. Daniel Mbau (Kinshasa), Pr. Tshilumbayi, Pr. Martin Mulamba (Kinshasa), Dr. Wasenda.</p>
+  </div>
+</section>
+
+<!-- AXES DE RÉFLEXION -->
+<section id="axes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Axes scientifiques</div>
+      <h2>Cinq axes pour structurer la réflexion.</h2>
+      <p>Chaque axe articule une problématique générale et une série de sous-thèmes travaillés
+      lors des séminaires, masterclass et ateliers de l'Académie.</p>
+    </div>
+    <div class="axes">
+      <div class="axe reveal">
+        <div class="pin"></div>
+        <div>
+          <h3>Axe 01 · Faire et réformer les Constitutions</h3>
+          <p>Acteurs, méthodes et controverses des processus constituants.</p>
+        </div>
+      </div>
+      <div class="axe reveal">
+        <div class="pin"></div>
+        <div>
+          <h3>Axe 02 · Élections, alternance politique et légitimité</h3>
+          <p>Restaurer la confiance démocratique par des processus électoraux crédibles.</p>
+        </div>
+      </div>
+      <div class="axe reveal">
+        <div class="pin"></div>
+        <div>
+          <h3>Axe 03 · Gouverner efficacement</h3>
+          <p>Régimes politiques, équilibre des pouvoirs et stabilité des institutions.</p>
+        </div>
+      </div>
+      <div class="axe reveal">
+        <div class="pin"></div>
+        <div>
+          <h3>Axe 04 · Justice constitutionnelle</h3>
+          <p>Les juges face au pouvoir : contrôle, régulation, protection des droits.</p>
+        </div>
+      </div>
+      <div class="axe reveal">
+        <div class="pin"></div>
+        <div>
+          <h3>Axe 05 · Réformer l'État africain face aux défis du XXIᵉ siècle</h3>
+          <p>Sécurité, climat, numérique et souveraineté : réformer l'État pour les enjeux nouveaux.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOUMETTRE UNE RÉFLEXION -->
+<section id="reflexion" class="contrib">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Plateforme scientifique</div>
+      <h2>Soumettez votre réflexion à l'Académie.</h2>
+      <p style="color:var(--gris);margin-top:1rem">
+        L'AADP est une plateforme ouverte de réflexion : chercheurs et praticiens peuvent
+        proposer une analyse, une note, un article ou une communication sur l'un des axes
+        de travail. Les propositions retenues sont discutées lors des activités de l'Académie
+        et peuvent être publiées sous son égide.
+      </p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Proposez</b> — envoyez votre résumé
+        (300 à 500 mots) via le formulaire, en précisant l'axe de rattachement.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Évaluation</b> — le Conseil scientifique
+        examine chaque proposition et vous répond avec un avis motivé.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Valorisation</b> — présentation en
+        séminaire, discussion lors des journées d'étude ou publication par l'Académie.</p></div>
+      </div>
+    </div>
+    <form class="panel" id="formContrib" novalidate>
+      <h3>Formulaire de soumission</h3>
+      <div class="two">
+        <div class="field">
+          <label for="c-nom">Nom *</label>
+          <input id="c-nom" name="nom" required autocomplete="family-name">
+        </div>
+        <div class="field">
+          <label for="c-prenom">Prénom *</label>
+          <input id="c-prenom" name="prenom" required autocomplete="given-name">
+        </div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="c-email">Email *</label>
+          <input id="c-email" type="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="c-pays">Pays *</label>
+          <input id="c-pays" name="pays" required autocomplete="country-name">
+        </div>
+      </div>
+      <div class="field">
+        <label for="c-inst">Institution / Université</label>
+        <input id="c-inst" name="institution">
+      </div>
+      <div class="field">
+        <label for="c-axe">Axe de rattachement *</label>
+        <select id="c-axe" name="axe" required>
+          <option value="">Sélectionner un axe…</option>
+          <option>Axe 01 · Faire et réformer les Constitutions</option>
+          <option>Axe 02 · Élections, alternance politique et légitimité</option>
+          <option>Axe 03 · Gouverner efficacement</option>
+          <option>Axe 04 · Justice constitutionnelle</option>
+          <option>Axe 05 · Réformer l'État africain face aux défis du XXIᵉ siècle</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-titre">Titre de la contribution *</label>
+        <input id="c-titre" name="titre" required>
+      </div>
+      <div class="field">
+        <label for="c-resume">Résumé (300–500 mots) *</label>
+        <textarea id="c-resume" name="resume" rows="6" required></textarea>
+      </div>
+      <button class="btn" type="submit" style="width:100%">Envoyer ma réflexion</button>
+      <div class="form-ok" id="okContrib">
+        <b>Réflexion reçue.</b> Le Conseil scientifique de l'AADP l'examinera et vous
+        répondra à l'adresse indiquée. Merci pour votre participation.
+      </div>
+      <p class="hint">* Champs obligatoires. Vos données ne sont utilisées que pour le
+      traitement de votre proposition.</p>
+    </form>
+  </div>
+</section>
+
+<!-- CONTRIBUER — s'engager auprès de l'Académie -->
+<section id="contribuer">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Contribuer à l'Académie</div>
+      <h2>S'engager aux côtés de l'AADP.</h2>
+      <p>Au-delà des travaux scientifiques, l'Académie s'appuie sur un réseau d'institutions,
+      de partenaires et de personnalités qui soutiennent son action et participent à sa vie.
+      Plusieurs voies d'engagement sont ouvertes.</p>
+    </div>
+    <div class="tri">
+      <div class="card reveal">
+        <div class="ic">◈</div>
+        <h3>Devenir membre</h3>
+        <p>Enseignants-chercheurs, magistrats, hauts fonctionnaires et praticiens du droit
+        public peuvent solliciter leur adhésion au Collège des membres.</p>
+        <p style="margin-top:1rem"><a href="#contribForm" style="color:var(--bordeaux);font-weight:700;border-bottom:2px solid var(--or)">Faire une demande d'adhésion →</a></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">✥</div>
+        <h3>Partenariat institutionnel</h3>
+        <p>Universités, juridictions, organisations régionales et institutions publiques :
+        nouer un partenariat scientifique, pédagogique ou éditorial avec l'AADP.</p>
+        <p style="margin-top:1rem"><a href="#contribForm" style="color:var(--bordeaux);font-weight:700;border-bottom:2px solid var(--or)">Proposer un partenariat →</a></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic">❖</div>
+        <h3>Soutenir l'Académie</h3>
+        <p>Contribuer financièrement au financement des bourses, publications et éditions
+        des Journées d'Étude — dons, mécénat, parrainage.</p>
+        <p style="margin-top:1rem"><a href="#contribForm" style="color:var(--bordeaux);font-weight:700;border-bottom:2px solid var(--or)">Nous soutenir →</a></p>
+      </div>
+    </div>
+
+    <form class="panel" id="contribForm" style="max-width:760px;margin:3.5rem auto 0" novalidate>
+      <h3>Manifester votre engagement</h3>
+      <div class="two">
+        <div class="field">
+          <label for="e-nom">Nom *</label>
+          <input id="e-nom" name="nom" required>
+        </div>
+        <div class="field">
+          <label for="e-prenom">Prénom *</label>
+          <input id="e-prenom" name="prenom" required>
+        </div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="e-email">Email *</label>
+          <input id="e-email" type="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="e-tel">Téléphone</label>
+          <input id="e-tel" type="tel" name="tel">
+        </div>
+      </div>
+      <div class="field">
+        <label for="e-inst">Institution / Organisation</label>
+        <input id="e-inst" name="institution">
+      </div>
+      <div class="field">
+        <label for="e-type">Nature de l'engagement *</label>
+        <select id="e-type" name="type" required>
+          <option value="">Sélectionner…</option>
+          <option>Demande d'adhésion au Collège des membres</option>
+          <option>Proposition de partenariat institutionnel</option>
+          <option>Soutien / mécénat / parrainage</option>
+          <option>Autre — précisez ci-dessous</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="e-msg">Message *</label>
+        <textarea id="e-msg" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn gold" type="submit" style="width:100%">Envoyer ma demande</button>
+      <div class="form-ok" id="okEngage">
+        <b>Merci.</b> Votre demande a bien été transmise au Secrétariat général de l'AADP,
+        qui reviendra vers vous prochainement.
+      </div>
+      <p class="hint">* Champs obligatoires.</p>
+    </form>
+  </div>
+</section>
+
+<!-- PUBLIC CIBLE -->
+<section id="public">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Public cible</div>
+      <h2>Un dialogue entre le monde académique et les praticiens.</h2>
+      <p>Les activités de l'Académie s'adressent à un public diversifié, avec une attention
+      particulière portée aux futurs décideurs et aux acteurs impliqués dans les processus
+      de réforme.</p>
+    </div>
+    <div class="obj-grid">
+      <div class="obj reveal">
+        <h3>Doctorants &amp; étudiants</h3>
+        <p>Doctorants, jeunes docteurs et étudiants en droit, science politique, relations
+        internationales et disciplines connexes.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Chercheurs</h3>
+        <p>Enseignants-chercheurs travaillant sur les questions constitutionnelles,
+        institutionnelles et électorales africaines.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Magistrats</h3>
+        <p>Magistrats, membres des juridictions constitutionnelles et personnels des
+        administrations publiques.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Parlementaires</h3>
+        <p>Parlementaires, collaborateurs parlementaires, membres des commissions électorales
+        et cadres des institutions de gouvernance.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Hauts fonctionnaires</h3>
+        <p>Hauts fonctionnaires, conseillers juridiques des administrations et responsables
+        de l'élaboration des politiques publiques.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Cabinets institutionnels</h3>
+        <p>Membres des cabinets présidentiels, gouvernementaux ou parlementaires participant
+        aux processus de réforme institutionnelle.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Responsables politiques</h3>
+        <p>Jeunes leaders, responsables politiques et acteurs publics appelés à exercer
+        des fonctions de décision ou d'encadrement institutionnel.</p>
+      </div>
+      <div class="obj reveal">
+        <h3>Organisations internationales</h3>
+        <p>Responsables d'organisations régionales africaines, internationales et de la
+        société civile actives dans la démocratie et l'État de droit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉVÉNEMENTS -->
+<section id="evenements" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Activités & événements</div>
+      <h2>Les rendez-vous de l'Académie.</h2>
+      <p>Journées d'étude, séminaires et masterclass rythment la vie de l'AADP. Chaque session
+      donne lieu à des inscriptions ouvertes au public cible de l'Académie.</p>
+    </div>
+    <div class="event-card reveal">
+      <div class="info">
+        <div class="eyebrow">Prochaine session · Inscriptions ouvertes</div>
+        <h3>1ʳᵉ Journées d'Étude — Les Réformes Constitutionnelles en Afrique Noire Francophone</h3>
+        <p>Cinq journées structurées autour de la progression pédagogique
+        <b>Comprendre · Comparer · Réformer · Négocier · Proposer</b>, combinant conférences,
+        masterclass, séminaires, études de cas et ateliers de rédaction constitutionnelle.
+        Avec la participation, entre autres, du <b>Pr. Blaise Tchikaya</b>,
+        du <b>Pr. Évariste Boshab</b>, du <b>Pr. Abdoulaye Soma</b>, du <b>Pr. Oumarou Narey</b>
+        et du <b>Pr. Jean-Louis Esambo</b>.</p>
+        <div class="meta">
+          <div>7 – 11 septembre 2026</div>
+          <div>Fleuve Congo Hôtel · Kinshasa, RD Congo</div>
+          <div>Certificat de participation délivré</div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a class="btn gold" href="/journees-etude-2026.html">Programme &amp; inscription</a>
+          <a class="btn ghost-light" href="#reflexion">Proposer une communication</a>
+        </div>
+      </div>
+      <div class="visual">
+        <img src="assets/img/carte_afrique_avec_elemant_de_la_cour.png"
+             alt="Emblème doré des Journées d'Étude de l'AADP">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section>
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow" style="justify-content:center">Avec le concours de</div>
+      <h2>Nos partenaires institutionnels.</h2>
+    </div>
+    <div class="partners">
+      <div class="partner reveal">
+        <div class="seal">CC</div>
+        <b>Cour Constitutionnelle</b>
+        <span>République démocratique du Congo</span>
+      </div>
+      <div class="partner reveal">
+        <div class="seal">I&F</div>
+        <b>I&F Entrepreneuriat</b>
+        <span>Partenaire organisateur</span>
+      </div>
+      <div class="partner reveal">
+        <div class="seal">LN</div>
+        <b>LexisNexis</b>
+        <span>Partenaire scientifique & éditorial</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <h2 class="display">Prenez part à la réflexion constitutionnelle africaine.</h2>
+    <p>Rejoignez le réseau de l'Académie, soumettez vos travaux ou inscrivez-vous à la
+    prochaine session des Journées d'Étude.</p>
+    <div class="cta">
+      <a class="btn gold" href="#reflexion">Soumettre une réflexion</a>
+      <a class="btn ghost-light" href="#contribuer">Contribuer à l'Académie</a>
+    </div>
+  </div>
+</section>
+
+<!-- PIED DE PAGE -->
+<footer>
+  <div class="wrap">
+    <div>
+      <img src="assets/img/logo_blanc.png" alt="AADP — Académie Africaine de Droit Public">
+      <p style="max-width:34ch">L'espace scientifique consacré au droit public, à la gouvernance
+      constitutionnelle et à l'État de droit en Afrique francophone.</p>
+    </div>
+    <div>
+      <h4>L'Académie</h4>
+      <ul>
+        <li><a href="#academie">Présentation</a></li>
+        <li><a href="#objectifs">Objectifs</a></li>
+        <li><a href="#gouvernance">Gouvernance &amp; membres</a></li>
+        <li><a href="#axes">Axes scientifiques</a></li>
+        <li><a href="#public">Public cible</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Participer</h4>
+      <ul>
+        <li><a href="#reflexion">Soumettre une réflexion</a></li>
+        <li><a href="#contribuer">Contribuer à l'Académie</a></li>
+        <li><a href="#evenements">Événements & inscriptions</a></li>
+        <li><a href="/journees-etude-2026.html">Journées d'Étude 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@afdp.com">contact@afdp.com</a></li>
+        <li>Fleuve Congo Hôtel</li>
+        <li>Kinshasa · RD Congo</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footline">
+    <div class="wrap">
+      <span>© 2026 Académie Africaine de Droit Public — Tous droits réservés.</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Menu mobile
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// Apparition au défilement
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Formulaires (démo côté client — brancher sur un backend/Formspree ensuite)
+function handleForm(formId, okId){
+  document.getElementById(formId).addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.target;
+    if(!f.checkValidity()){f.reportValidity();return;}
+    document.getElementById(okId).style.display='block';
+    f.querySelectorAll('input,select,textarea,button').forEach(x=>x.disabled=true);
+  });
+}
+handleForm('formContrib','okContrib');
+handleForm('contribForm','okEngage');
+</script>
+</body>
+</html>
