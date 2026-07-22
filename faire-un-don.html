@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faire un don — Académie Africaine de Droit Public</title>
+<meta name="description" content="Soutenez l'Académie Africaine de Droit Public. Dons sécurisés par Mobile Money (Orange Money, M-Pesa Vodacom, Airtel Money) et carte bancaire (Visa, Mastercard).">
+<meta name="theme-color" content="#43191A">
+<link rel="icon" type="image/png" href="assets/img/logo_noire.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bordeaux:#43191A;
+  --bordeaux-2:#5C2323;
+  --bordeaux-3:#7A2C2C;
+  --or:#C9932B;
+  --or-clair:#E0AE45;
+  --or-fonce:#9A6E1D;
+  --ivoire:#FAF6EF;
+  --ivoire-2:#F3ECDF;
+  --encre:#221C18;
+  --gris:#6E635B;
+  --gris-2:#8E827A;
+  --blanc:#FFFFFF;
+  --trait:rgba(67,25,26,.14);
+  --maxw:1180px;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Public Sans",system-ui,sans-serif;
+  color:var(--encre);
+  background:var(--ivoire);
+  line-height:1.65;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:"Marcellus",serif;font-weight:400;line-height:1.15;letter-spacing:.01em}
+h2{font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--bordeaux)}
+h3{font-size:1.25rem;color:var(--bordeaux)}
+p{max-width:68ch}
+
+/* eyebrow */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--or);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--or)}
+
+/* topbar */
+.topbar{background:var(--bordeaux);color:#EAD9C4;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:.45rem 24px;gap:1rem}
+.topbar a:hover{color:var(--or-clair)}
+.topbar .right{display:flex;gap:1.4rem;white-space:nowrap}
+
+/* header */
+header.site{background:var(--blanc);border-bottom:1px solid var(--trait);position:sticky;top:0;z-index:50}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 24px}
+.brand{display:flex;align-items:center}
+.brand img{height:72px;width:auto}
+nav.main{display:flex;align-items:center;gap:1.6rem;font-size:.9rem;font-weight:600}
+nav.main a{padding:.35rem 0;border-bottom:2px solid transparent;transition:.2s;color:var(--encre)}
+nav.main a:hover{color:var(--bordeaux);border-color:var(--or)}
+.btn{
+  display:inline-block;background:var(--bordeaux);color:#fff;font-weight:600;
+  padding:.72rem 1.5rem;border-radius:999px;border:1px solid var(--bordeaux);
+  transition:.2s;font-size:.92rem;cursor:pointer;
+}
+.btn:hover{background:var(--bordeaux-3)}
+.btn.gold{background:var(--or);border-color:var(--or);color:var(--bordeaux)}
+.btn.gold:hover{background:var(--or-clair)}
+.btn.ghost{background:transparent;color:var(--bordeaux)}
+.btn.ghost:hover{background:var(--bordeaux);color:#fff}
+.btn.ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost-light:hover{background:rgba(255,255,255,.12)}
+.btn.large{padding:1rem 2rem;font-size:1rem}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:.4rem}
+.burger span{display:block;width:24px;height:2px;background:var(--bordeaux);margin:5px 0;transition:.25s}
+
+/* HERO */
+.hero{
+  background:
+    radial-gradient(ellipse at 80% 30%, rgba(201,147,43,.22), transparent 55%),
+    linear-gradient(160deg, var(--bordeaux) 0%, #351314 60%, #2A0F10 100%);
+  color:#F5EBDD;position:relative;overflow:hidden;
+}
+.hero::after{content:"";position:absolute;inset:14px;border:1px solid rgba(201,147,43,.35);pointer-events:none;border-radius:6px}
+.hero .wrap{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;
+  padding-top:5rem;padding-bottom:5rem;position:relative;z-index:1;
+}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff;margin-bottom:1.2rem}
+.hero h1 em{font-style:normal;color:var(--or-clair)}
+.hero p.lead{font-size:1.08rem;color:#E8D9C6;margin-bottom:2rem;max-width:56ch}
+.hero .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.hero .trust{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.85rem;color:#D8C4AB;align-items:center}
+.hero .trust .item{display:flex;align-items:center;gap:.5rem}
+.hero .trust .item svg{width:16px;height:16px;color:var(--or-clair)}
+
+/* Hero right — quick donation card */
+.quick-donate{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(201,147,43,.35);
+  border-radius:18px;
+  padding:2rem;
+  backdrop-filter:blur(10px);
+}
+.quick-donate .qd-eye{font-size:.72rem;letter-spacing:.2em;color:var(--or-clair);text-transform:uppercase;font-weight:700;margin-bottom:.6rem}
+.quick-donate h3{color:#fff;font-size:1.35rem;margin-bottom:1.4rem}
+.qd-toggle{display:flex;background:rgba(0,0,0,.25);border-radius:999px;padding:4px;margin-bottom:1.2rem}
+.qd-toggle button{
+  flex:1;background:transparent;border:none;color:#DECBB4;padding:.55rem 1rem;
+  border-radius:999px;font-weight:600;font-size:.85rem;cursor:pointer;transition:.2s;
+}
+.qd-toggle button.active{background:var(--or);color:var(--bordeaux)}
+.qd-amounts{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1rem}
+.qd-amounts button{
+  background:rgba(255,255,255,.08);border:1px solid rgba(201,147,43,.35);color:#fff;
+  padding:.85rem .3rem;border-radius:10px;font-weight:700;font-size:.98rem;cursor:pointer;transition:.2s;
+  font-family:inherit;
+}
+.qd-amounts button:hover{background:rgba(255,255,255,.15)}
+.qd-amounts button.active{background:var(--or);border-color:var(--or);color:var(--bordeaux)}
+.qd-custom{
+  display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);
+  border:1px solid rgba(201,147,43,.35);border-radius:10px;margin-bottom:1.2rem;overflow:hidden;
+}
+.qd-custom input{
+  flex:1;background:transparent;border:none;color:#fff;padding:.85rem;font:inherit;font-size:1rem;outline:none;
+}
+.qd-custom input::placeholder{color:rgba(255,255,255,.5)}
+.qd-custom .cur{padding:.85rem 1rem;background:rgba(0,0,0,.25);color:var(--or-clair);font-weight:700;font-size:.9rem;letter-spacing:.05em}
+
+/* SECTIONS */
+section{padding:5.5rem 0}
+section.alt{background:var(--blanc);border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.sec-head{max-width:760px;margin-bottom:3rem}
+.sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head p{color:var(--gris);margin-top:1rem}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+
+/* IMPACT — what your donation funds */
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:2.5rem}
+.impact-card{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:16px;padding:2rem 1.8rem;
+  transition:.25s;position:relative;overflow:hidden;
+}
+.impact-card:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(67,25,26,.1);border-color:var(--or)}
+.impact-card .amount{
+  font-family:"Marcellus",serif;font-size:2.2rem;color:var(--bordeaux);
+  display:flex;align-items:baseline;gap:.4rem;margin-bottom:.6rem;
+}
+.impact-card .amount span{font-size:.9rem;color:var(--or);font-family:"Public Sans";letter-spacing:.1em;font-weight:700}
+.impact-card h3{margin-bottom:.6rem;font-size:1.15rem}
+.impact-card p{font-size:.94rem;color:var(--gris)}
+.impact-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--or);
+  transform:scaleY(0);transform-origin:top;transition:transform .35s;
+}
+.impact-card:hover::before{transform:scaleY(1)}
+
+/* PAYMENT METHODS BAND */
+.methods{background:linear-gradient(180deg,var(--ivoire) 0%,var(--ivoire-2) 100%)}
+.methods-groups{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.methods-group{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:18px;padding:2rem 1.8rem;
+}
+.methods-group h3{
+  font-size:1.05rem;margin-bottom:.4rem;
+  display:flex;align-items:center;gap:.6rem;
+}
+.methods-group h3 .badge{
+  background:var(--ivoire-2);color:var(--or-fonce);font-size:.65rem;letter-spacing:.15em;
+  text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;font-weight:700;
+  font-family:"Public Sans";
+}
+.methods-group > p{font-size:.9rem;color:var(--gris);margin-bottom:1.4rem}
+.logos{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.logo-tile{
+  background:#fff;border:1px solid var(--trait);border-radius:10px;
+  padding:.6rem .9rem;height:52px;display:flex;align-items:center;justify-content:center;
+  transition:.25s;min-width:90px;
+}
+.logo-tile:hover{border-color:var(--or);transform:translateY(-2px);box-shadow:0 8px 18px rgba(67,25,26,.08)}
+.logo-tile svg{height:32px;width:auto}
+
+/* MAIN FORM SECTION */
+.form-section .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.form-side h2{margin-bottom:1rem}
+.form-side .lead-p{color:var(--gris);margin-bottom:2rem}
+.reassure{margin-top:2rem;background:var(--ivoire-2);border-left:3px solid var(--or);padding:1.4rem 1.6rem;border-radius:8px}
+.reassure h4{font-family:"Marcellus",serif;font-weight:400;color:var(--bordeaux);font-size:1.05rem;margin-bottom:.5rem}
+.reassure p{font-size:.9rem;color:#3D342E}
+
+form.donate{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:18px;
+  padding:2.4rem;box-shadow:0 28px 70px rgba(67,25,26,.09);
+}
+form.donate h3{margin-bottom:1.6rem;font-size:1.35rem}
+.step-label{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);
+  font-weight:700;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;
+}
+.step-label::before{
+  content:attr(data-step);background:var(--or);color:var(--bordeaux);
+  width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+  font-size:.72rem;font-weight:700;
+}
+
+/* frequency toggle */
+.freq-toggle{
+  display:grid;grid-template-columns:1fr 1fr;background:var(--ivoire-2);border-radius:12px;
+  padding:4px;margin-bottom:1.6rem;
+}
+.freq-toggle button{
+  background:transparent;border:none;padding:.75rem;border-radius:10px;font-weight:600;
+  color:var(--gris);cursor:pointer;font-family:inherit;font-size:.95rem;transition:.2s;
+}
+.freq-toggle button.active{background:var(--bordeaux);color:#fff}
+
+/* currency toggle */
+.cur-toggle{display:flex;gap:.5rem;margin-bottom:1.2rem}
+.cur-toggle button{
+  background:var(--ivoire);border:1px solid var(--trait);padding:.5rem 1rem;border-radius:999px;
+  font-weight:600;font-size:.82rem;cursor:pointer;font-family:inherit;color:var(--gris);transition:.2s;
+}
+.cur-toggle button.active{background:var(--bordeaux);color:#fff;border-color:var(--bordeaux)}
+
+/* amounts */
+.amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-bottom:1rem}
+.amounts button{
+  background:var(--ivoire);border:1.5px solid var(--trait);color:var(--bordeaux);
+  padding:1rem .3rem;border-radius:12px;font-weight:700;font-size:1rem;cursor:pointer;
+  font-family:inherit;transition:.2s;
+}
+.amounts button:hover{border-color:var(--or)}
+.amounts button.active{background:#F8EFD8;border-color:var(--or);color:var(--bordeaux)}
+.custom-amount{
+  display:flex;align-items:center;background:var(--ivoire);border:1.5px solid var(--trait);
+  border-radius:12px;margin-bottom:1.6rem;overflow:hidden;
+}
+.custom-amount:focus-within{border-color:var(--or)}
+.custom-amount input{
+  flex:1;background:transparent;border:none;padding:.95rem 1rem;font:inherit;font-size:1rem;outline:none;color:var(--encre);
+}
+.custom-amount .prefix{padding:.95rem 1rem;background:var(--ivoire-2);color:var(--or-fonce);font-weight:700;letter-spacing:.05em}
+
+/* method chooser */
+.pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-bottom:1.6rem}
+.pay-methods label{
+  position:relative;background:var(--ivoire);border:1.5px solid var(--trait);border-radius:12px;
+  padding:.9rem .5rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.5rem;
+  transition:.2s;text-align:center;
+}
+.pay-methods label:hover{border-color:var(--or)}
+.pay-methods input{position:absolute;opacity:0;pointer-events:none}
+.pay-methods label:has(input:checked){background:#FDF6E4;border-color:var(--or);box-shadow:inset 0 0 0 1px var(--or)}
+.pay-methods .pm-logo{height:34px;display:flex;align-items:center;justify-content:center}
+.pay-methods .pm-logo svg{height:28px;width:auto}
+.pay-methods .pm-name{font-size:.72rem;font-weight:600;color:var(--bordeaux);line-height:1.2}
+
+/* fields */
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bordeaux);margin-bottom:.4rem}
+.field input,.field select,.field textarea{
+  width:100%;padding:.85rem 1rem;border:1.5px solid var(--trait);border-radius:10px;
+  font:inherit;font-size:.95rem;background:var(--ivoire);color:var(--encre);transition:.2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--or);background:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.checkbox-line{display:flex;align-items:flex-start;gap:.6rem;font-size:.87rem;color:var(--gris);margin-bottom:1rem;cursor:pointer}
+.checkbox-line input{margin-top:.25rem;accent-color:var(--or)}
+.checkbox-line a{color:var(--bordeaux);border-bottom:1px solid var(--or)}
+
+.submit-block{margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--trait)}
+.total-line{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:.9rem 1.1rem;background:var(--bordeaux);color:#fff;border-radius:12px;margin-bottom:1rem;
+}
+.total-line .lbl{font-size:.85rem;color:#DECBB4;letter-spacing:.05em}
+.total-line .val{font-family:"Marcellus",serif;font-size:1.6rem;color:var(--or-clair)}
+.total-line .val small{font-size:.9rem;color:#DECBB4;font-family:"Public Sans"}
+
+.form-ok{
+  display:none;background:#F0F7EF;border:1px solid #9CC49A;color:#2C5A2A;
+  border-radius:10px;padding:1rem 1.2rem;margin-top:1rem;font-size:.93rem;
+}
+.hint{font-size:.78rem;color:var(--gris);margin-top:.9rem;text-align:center}
+
+/* SECURITY BAND */
+.security{background:var(--ivoire-2);padding:2.5rem 0;border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.security .wrap{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;align-items:center;text-align:center}
+.security-item{display:flex;align-items:center;gap:.7rem;color:var(--bordeaux);font-size:.9rem;font-weight:600}
+.security-item svg{width:22px;height:22px;color:var(--or)}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.process-card{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:16px;padding:2rem 1.7rem;
+  position:relative;
+}
+.process-card .step-n{
+  width:44px;height:44px;border-radius:50%;background:var(--bordeaux);color:var(--or-clair);
+  display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1.2rem;margin-bottom:1rem;
+}
+.process-card h3{margin-bottom:.5rem;font-size:1.1rem}
+.process-card p{font-size:.9rem;color:var(--gris)}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+.faq details{
+  background:var(--blanc);border:1px solid var(--trait);border-radius:12px;margin-bottom:.8rem;
+  overflow:hidden;transition:.2s;
+}
+.faq details[open]{border-color:var(--or);box-shadow:0 8px 22px rgba(67,25,26,.06)}
+.faq summary{
+  padding:1.2rem 1.4rem;font-weight:600;color:var(--bordeaux);cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--or);font-size:1.4rem;transition:.2s;font-weight:400}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .content{padding:0 1.4rem 1.2rem;color:var(--gris);font-size:.93rem}
+
+/* CTA FINAL */
+.cta-final{
+  background:radial-gradient(ellipse at 20% 20%, rgba(201,147,43,.18), transparent 55%),
+             linear-gradient(150deg,var(--bordeaux),#2E1011);
+  color:#fff;text-align:center;
+}
+.cta-final h2{color:#fff;margin-bottom:1rem}
+.cta-final p{color:#E4D3BE;max-width:60ch;margin:0 auto 2rem}
+
+/* footer */
+footer{background:#2A0F10;color:#C9B29A;font-size:.9rem;padding:3.5rem 0 1.5rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem}
+footer img.foot-logo{height:50px;width:auto;margin-bottom:1rem}
+footer h4{font-family:"Marcellus",serif;font-weight:400;color:var(--or-clair);margin-bottom:1rem;letter-spacing:.04em}
+footer ul{list-style:none}
+footer li{margin-bottom:.55rem}
+footer a:hover{color:var(--or-clair)}
+.footline{border-top:1px solid rgba(201,147,43,.25);margin-top:2.5rem;padding-top:1.3rem;font-size:.78rem;color:#8C7B6A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero .wrap,.methods-groups,.form-section .wrap{grid-template-columns:1fr;gap:2rem}
+  .impact-grid,.process-grid{grid-template-columns:1fr 1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  nav.main{
+    display:none;position:absolute;top:100%;left:0;right:0;background:#fff;
+    flex-direction:column;align-items:flex-start;padding:1.2rem 24px 1.6rem;gap:1rem;
+    border-bottom:1px solid var(--trait);box-shadow:0 20px 40px rgba(0,0,0,.08);
+  }
+  nav.main.open{display:flex}
+  .burger{display:block}
+  .topbar .right span:last-child{display:none}
+  .impact-grid,.process-grid{grid-template-columns:1fr}
+  .amounts,.pay-methods{grid-template-columns:repeat(2,1fr)}
+  .two{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  section{padding:3.8rem 0}
+}
+</style>
+</head>
+<body>
+
+<!-- topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Académie Africaine de Droit Public</span>
+    <div class="right">
+      <a href="mailto:contact@afdp.com">contact@afdp.com</a>
+      <span>Kinshasa · RD Congo</span>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Accueil AADP">
+      <img src="assets/img/logo_noire.png" alt="Académie Africaine de Droit Public">
+    </a>
+    <nav class="main" id="nav">
+      <a href="index.html#academie">À propos</a>
+      <a href="index.html#axes">Axes de réflexion</a>
+      <a href="index.html#gouvernance">Membres du conseil</a>
+      <a href="index.html#evenements">Événements</a>
+      <a class="btn gold" href="faire-un-don.html">Faire un don</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--or-clair)">Soutenir l'Académie</div>
+      <h1>Votre don fait vivre la <em>pensée constitutionnelle</em> africaine.</h1>
+      <p class="lead">
+        Chaque contribution permet à l'AADP de financer les bourses de jeunes chercheurs,
+        d'organiser ses Journées d'Étude, de publier ses travaux et de nourrir un débat
+        public exigeant sur les institutions du continent.
+      </p>
+      <div class="cta">
+        <a class="btn gold large" href="#formulaire">Je fais un don</a>
+        <a class="btn ghost-light large" href="#impact">Voir l'impact</a>
+      </div>
+      <div class="trust">
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          Paiement 100% sécurisé
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Confirmation instantanée
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7 9 18l-5-5"/></svg>
+          Reçu fiscal envoyé
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick donation card -->
+    <div class="quick-donate">
+      <div class="qd-eye">Don rapide</div>
+      <h3>Choisissez votre montant</h3>
+      <div class="qd-toggle">
+        <button type="button" class="active" data-qd-freq="once">Don unique</button>
+        <button type="button" data-qd-freq="monthly">Mensuel</button>
+      </div>
+      <div class="qd-amounts">
+        <button type="button" data-qd-amt="25">25 $</button>
+        <button type="button" data-qd-amt="50" class="active">50 $</button>
+        <button type="button" data-qd-amt="100">100 $</button>
+        <button type="button" data-qd-amt="250">250 $</button>
+        <button type="button" data-qd-amt="500">500 $</button>
+        <button type="button" data-qd-amt="1000">1 000 $</button>
+      </div>
+      <div class="qd-custom">
+        <input type="number" id="qdCustom" placeholder="Montant libre" min="1">
+        <span class="cur">USD</span>
+      </div>
+      <a class="btn gold" href="#formulaire" style="width:100%;text-align:center" id="qdContinue">Continuer →</a>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow">Votre impact concret</div>
+      <h2>Ce que finance votre don.</h2>
+      <p>Chaque tranche de contribution correspond à un impact précis dans la vie académique
+      et scientifique de l'AADP.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="amount">50 $ <span>USD</span></div>
+        <h3>Une place de séminaire</h3>
+        <p>Offre à un jeune chercheur africain l'accès à une masterclass animée par un
+        professeur de référence lors des Journées d'Étude.</p>
+      </div>
+      <div class="impact-card">
+        <div class="amount">250 $ <span>USD</span></div>
+        <h3>Une bourse partielle</h3>
+        <p>Contribue à couvrir les frais de participation d'un doctorant venu d'un autre
+        pays d'Afrique francophone pour une session complète.</p>
+      </div>
+      <div class="impact-card">
+        <div class="amount">1 000 $ <span>USD</span></div>
+        <h3>Une publication scientifique</h3>
+        <p>Finance l'édition et la diffusion d'une note ou d'un article de fond sous l'égide
+        de l'Académie, distribué au réseau institutionnel.</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--gris);font-size:.92rem">
+      Tout montant, quelle que soit sa taille, contribue directement aux missions scientifiques
+      et pédagogiques de l'Académie.
+    </p>
+  </div>
+</section>
+
+<!-- PAYMENT METHODS -->
+<section class="methods alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow">Moyens de paiement acceptés</div>
+      <h2>Un don sécurisé, en quelques secondes.</h2>
+      <p>L'AADP accepte les principaux moyens de paiement d'Afrique francophone
+      et les cartes bancaires internationales.</p>
+    </div>
+    <div class="methods-groups">
+      <div class="methods-group">
+        <h3>Mobile Money <span class="badge">RD Congo & Afrique</span></h3>
+        <p>Payez directement depuis votre portefeuille mobile — validation instantanée par
+        code USSD ou notification sur votre application.</p>
+        <div class="logos">
+          <div class="logo-tile" title="Orange Money">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Orange Money">
+              <rect width="120" height="40" fill="#FF7900" rx="4"/>
+              <text x="60" y="18" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1.5">orange</text>
+              <text x="60" y="31" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="1.2">MONEY</text>
+            </svg>
+          </div>
+          <div class="logo-tile" title="M-Pesa Vodacom">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="M-Pesa">
+              <rect width="120" height="40" fill="#EE1C25" rx="4"/>
+              <text x="60" y="26" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">M-PESA</text>
+            </svg>
+          </div>
+          <div class="logo-tile" title="Airtel Money">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Airtel Money">
+              <rect width="120" height="40" fill="#E4022D" rx="4"/>
+              <text x="60" y="18" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="#fff" font-style="italic">airtel</text>
+              <text x="60" y="32" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#fff" letter-spacing="1.5">MONEY</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="methods-group">
+        <h3>Cartes bancaires <span class="badge">International</span></h3>
+        <p>Payez par carte de débit ou de crédit depuis n'importe quel pays — passerelle
+        conforme aux normes internationales PCI-DSS.</p>
+        <div class="logos">
+          <div class="logo-tile" title="Visa">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+              <rect width="120" height="40" fill="#fff" rx="4"/>
+              <rect y="30" width="120" height="4" fill="#F7B600"/>
+              <rect width="120" height="4" fill="#1A1F71"/>
+              <text x="60" y="26" font-family="Arial Black, Helvetica, sans-serif" font-size="19" font-weight="900" font-style="italic" text-anchor="middle" fill="#1A1F71" letter-spacing="2">VISA</text>
+            </svg>
+          </div>
+          <div class="logo-tile" title="Mastercard">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+              <rect width="120" height="40" fill="#fff" rx="4"/>
+              <circle cx="50" cy="20" r="12" fill="#EB001B"/>
+              <circle cx="70" cy="20" r="12" fill="#F79E1B" fill-opacity=".95"/>
+              <path d="M60 11.5 a12 12 0 0 1 0 17 a12 12 0 0 1 0 -17z" fill="#FF5F00"/>
+            </svg>
+          </div>
+          <div class="logo-tile" title="American Express">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="American Express">
+              <rect width="120" height="40" fill="#006FCF" rx="4"/>
+              <text x="60" y="17" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">AMERICAN</text>
+              <text x="60" y="30" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">EXPRESS</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATION FORM -->
+<section class="form-section" id="formulaire">
+  <div class="wrap">
+    <div class="form-side">
+      <div class="eyebrow">Formulaire de don</div>
+      <h2>Complétez votre soutien.</h2>
+      <p class="lead-p">
+        Renseignez le montant, votre moyen de paiement préféré et vos coordonnées.
+        Un reçu vous sera transmis dès la validation de la transaction.
+      </p>
+      <div class="reassure">
+        <h4>Une passerelle sécurisée</h4>
+        <p>Les paiements sont traités par une passerelle certifiée conforme aux normes
+        PCI-DSS et 3D Secure. Aucune donnée bancaire n'est stockée sur les serveurs de l'AADP.</p>
+      </div>
+      <div class="reassure" style="margin-top:1rem">
+        <h4>Transparence financière</h4>
+        <p>Chaque année, l'Académie publie un rapport d'activité détaillant l'usage des dons
+        reçus, par ligne de dépense et par projet financé.</p>
+      </div>
+      <div class="reassure" style="margin-top:1rem">
+        <h4>Vos données protégées</h4>
+        <p>Vos informations personnelles ne sont utilisées que pour le traitement de votre
+        don, l'envoi du reçu et, si vous le souhaitez, des nouvelles de l'Académie.</p>
+      </div>
+    </div>
+
+    <form class="donate" id="donateForm" novalidate>
+      <h3>Finalisez votre don</h3>
+
+      <!-- STEP 1: Frequency -->
+      <div class="step-label" data-step="1">Fréquence du don</div>
+      <div class="freq-toggle">
+        <button type="button" class="active" data-freq="once">Don unique</button>
+        <button type="button" data-freq="monthly">Don mensuel</button>
+      </div>
+
+      <!-- STEP 2: Amount -->
+      <div class="step-label" data-step="2">Montant</div>
+      <div class="cur-toggle">
+        <button type="button" class="active" data-cur="USD">USD</button>
+        <button type="button" data-cur="CDF">Francs congolais (CDF)</button>
+      </div>
+      <div class="amounts" id="amountBtns">
+        <button type="button" data-amt="25">25</button>
+        <button type="button" data-amt="50" class="active">50</button>
+        <button type="button" data-amt="100">100</button>
+        <button type="button" data-amt="250">250</button>
+        <button type="button" data-amt="500">500</button>
+        <button type="button" data-amt="1000">1 000</button>
+        <button type="button" data-amt="2500">2 500</button>
+        <button type="button" data-amt="5000">5 000</button>
+      </div>
+      <div class="custom-amount">
+        <span class="prefix" id="curPrefix">USD</span>
+        <input type="number" id="customAmt" placeholder="Autre montant" min="1">
+      </div>
+
+      <!-- STEP 3: Payment method -->
+      <div class="step-label" data-step="3">Moyen de paiement</div>
+      <div class="pay-methods">
+        <label>
+          <input type="radio" name="pm" value="orange" checked>
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#FF7900" rx="4"/><text x="60" y="18" font-family="Helvetica" font-size="10" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1.5">orange</text><text x="60" y="31" font-family="Helvetica" font-size="9" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="1.2">MONEY</text></svg>
+          </div>
+          <span class="pm-name">Orange Money</span>
+        </label>
+        <label>
+          <input type="radio" name="pm" value="mpesa">
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#EE1C25" rx="4"/><text x="60" y="26" font-family="Helvetica" font-size="15" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">M-PESA</text></svg>
+          </div>
+          <span class="pm-name">M-Pesa Vodacom</span>
+        </label>
+        <label>
+          <input type="radio" name="pm" value="airtel">
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#E4022D" rx="4"/><text x="60" y="18" font-family="Helvetica" font-size="12" font-weight="900" text-anchor="middle" fill="#fff" font-style="italic">airtel</text><text x="60" y="32" font-family="Helvetica" font-size="8" font-weight="700" text-anchor="middle" fill="#fff" letter-spacing="1.5">MONEY</text></svg>
+          </div>
+          <span class="pm-name">Airtel Money</span>
+        </label>
+        <label>
+          <input type="radio" name="pm" value="visa">
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#fff" rx="4" stroke="#eee"/><rect y="30" width="120" height="4" fill="#F7B600"/><rect width="120" height="4" fill="#1A1F71"/><text x="60" y="26" font-family="Arial Black" font-size="19" font-weight="900" font-style="italic" text-anchor="middle" fill="#1A1F71" letter-spacing="2">VISA</text></svg>
+          </div>
+          <span class="pm-name">Visa</span>
+        </label>
+        <label>
+          <input type="radio" name="pm" value="mastercard">
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#fff" rx="4" stroke="#eee"/><circle cx="50" cy="20" r="12" fill="#EB001B"/><circle cx="70" cy="20" r="12" fill="#F79E1B" fill-opacity=".95"/><path d="M60 11.5 a12 12 0 0 1 0 17 a12 12 0 0 1 0 -17z" fill="#FF5F00"/></svg>
+          </div>
+          <span class="pm-name">Mastercard</span>
+        </label>
+        <label>
+          <input type="radio" name="pm" value="amex">
+          <div class="pm-logo">
+            <svg viewBox="0 0 120 40"><rect width="120" height="40" fill="#006FCF" rx="4"/><text x="60" y="17" font-family="Helvetica" font-size="8" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">AMERICAN</text><text x="60" y="30" font-family="Helvetica" font-size="8" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">EXPRESS</text></svg>
+          </div>
+          <span class="pm-name">Amex</span>
+        </label>
+      </div>
+
+      <!-- STEP 4: Personal info -->
+      <div class="step-label" data-step="4">Vos coordonnées</div>
+      <div class="two">
+        <div class="field">
+          <label for="d-prenom">Prénom *</label>
+          <input id="d-prenom" name="prenom" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="d-nom">Nom *</label>
+          <input id="d-nom" name="nom" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="field">
+        <label for="d-email">Email *</label>
+        <input id="d-email" type="email" name="email" required autocomplete="email" placeholder="vous@exemple.com">
+      </div>
+      <div class="field" id="phoneField">
+        <label for="d-tel">Téléphone (pour Mobile Money) *</label>
+        <input id="d-tel" type="tel" name="tel" placeholder="+243 ..." autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="d-pays">Pays</label>
+        <select id="d-pays" name="pays">
+          <option value="CD" selected>République démocratique du Congo</option>
+          <option value="CG">République du Congo</option>
+          <option value="CI">Côte d'Ivoire</option>
+          <option value="SN">Sénégal</option>
+          <option value="BF">Burkina Faso</option>
+          <option value="ML">Mali</option>
+          <option value="CM">Cameroun</option>
+          <option value="BJ">Bénin</option>
+          <option value="TG">Togo</option>
+          <option value="NE">Niger</option>
+          <option value="GA">Gabon</option>
+          <option value="RW">Rwanda</option>
+          <option value="BI">Burundi</option>
+          <option value="FR">France</option>
+          <option value="BE">Belgique</option>
+          <option value="CA">Canada</option>
+          <option value="US">États-Unis</option>
+          <option value="XX">Autre</option>
+        </select>
+      </div>
+      <label class="checkbox-line">
+        <input type="checkbox">
+        <span>Je souhaite rester anonyme dans les publications de l'Académie.</span>
+      </label>
+      <label class="checkbox-line">
+        <input type="checkbox" checked>
+        <span>J'accepte de recevoir un reçu par email et les <a href="#">conditions générales</a>.</span>
+      </label>
+
+      <div class="submit-block">
+        <div class="total-line">
+          <span class="lbl">Total du don</span>
+          <span class="val"><span id="totalAmt">50</span> <small id="totalCur">USD</small><span id="freqSuffix"></span></span>
+        </div>
+        <button class="btn gold large" type="submit" style="width:100%">
+          Payer avec <span id="payWith">Orange Money</span> →
+        </button>
+        <div class="form-ok" id="formOk">
+          <b>Merci !</b> Votre don a été transmis à notre passerelle de paiement.
+          Vous allez recevoir une notification sur votre téléphone pour finaliser la transaction,
+          puis un email de confirmation avec votre reçu.
+        </div>
+        <p class="hint">🔒 Transaction chiffrée · Aucune donnée bancaire stockée par l'AADP</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- SECURITY BAND -->
+<div class="security">
+  <div class="wrap">
+    <div class="security-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Paiement chiffré SSL / TLS
+    </div>
+    <div class="security-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4Z"/></svg>
+      Passerelle PCI-DSS
+    </div>
+    <div class="security-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      3D Secure & authentification forte
+    </div>
+    <div class="security-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+      Reçu fiscal automatique
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow">Comment ça marche</div>
+      <h2>Trois étapes, deux minutes.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="step-n">1</div>
+        <h3>Choisissez votre don</h3>
+        <p>Sélectionnez le montant, la fréquence (unique ou mensuel) et votre moyen de
+        paiement préféré parmi ceux acceptés.</p>
+      </div>
+      <div class="process-card">
+        <div class="step-n">2</div>
+        <h3>Validez le paiement</h3>
+        <p>Confirmez la transaction sur votre téléphone (Mobile Money) ou saisissez vos
+        informations de carte sur la passerelle sécurisée.</p>
+      </div>
+      <div class="process-card">
+        <div class="step-n">3</div>
+        <h3>Recevez votre reçu</h3>
+        <p>Un email de confirmation vous parvient immédiatement avec votre reçu et
+        l'usage prévu de votre contribution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow">Questions fréquentes</div>
+      <h2>Vos questions sur les dons.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Mon paiement est-il sécurisé ?</summary>
+        <div class="content">Oui. Les transactions passent par une passerelle certifiée
+        PCI-DSS avec chiffrement SSL/TLS et 3D Secure. L'AADP ne stocke aucune donnée
+        bancaire sur ses serveurs — seul l'opérateur de paiement voit vos coordonnées
+        financières.</div>
+      </details>
+      <details>
+        <summary>Comment fonctionne le don par Mobile Money ?</summary>
+        <div class="content">Après avoir sélectionné Orange Money, M-Pesa ou Airtel Money,
+        vous recevrez un code de confirmation par SMS ou une notification dans l'application
+        de votre opérateur. Il vous suffit de valider avec votre code PIN habituel.
+        La confirmation est instantanée.</div>
+      </details>
+      <details>
+        <summary>Puis-je faire un don depuis l'étranger ?</summary>
+        <div class="content">Oui. Les cartes Visa, Mastercard et American Express fonctionnent
+        depuis n'importe quel pays. Le montant sera converti automatiquement dans la devise
+        de votre carte au taux de change du jour.</div>
+      </details>
+      <details>
+        <summary>Comment puis-je recevoir un reçu ?</summary>
+        <div class="content">Un reçu électronique est envoyé automatiquement à l'adresse
+        email que vous avez indiquée, immédiatement après la validation du paiement.
+        Pour les institutions et entreprises souhaitant un reçu au format PDF officiel avec
+        cachet, contactez directement <a href="mailto:contact@afdp.com">contact@afdp.com</a>.</div>
+      </details>
+      <details>
+        <summary>Puis-je annuler un don mensuel ?</summary>
+        <div class="content">Oui, à tout moment. Un lien de gestion vous est envoyé par email
+        avec la première confirmation. Vous pouvez également écrire à
+        <a href="mailto:contact@afdp.com">contact@afdp.com</a> pour interrompre ou modifier
+        votre don récurrent.</div>
+      </details>
+      <details>
+        <summary>Comment mon don sera-t-il utilisé ?</summary>
+        <div class="content">Les fonds collectés sont exclusivement affectés aux missions
+        scientifiques et pédagogiques de l'Académie : bourses de jeunes chercheurs,
+        organisation des Journées d'Étude, publications et diffusion des travaux, activités
+        de formation continue. Un rapport financier est publié chaque année.</div>
+      </details>
+      <details>
+        <summary>Est-il possible de faire un don par virement bancaire ?</summary>
+        <div class="content">Oui, pour les dons importants ou institutionnels. Contactez
+        <a href="mailto:contact@afdp.com">contact@afdp.com</a> pour recevoir les coordonnées
+        bancaires de l'Académie et convenir des modalités.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--or-clair);justify-content:center;display:inline-flex">Une autre manière de soutenir</div>
+    <h2 class="display">Rejoignez le réseau de l'AADP.</h2>
+    <p>Au-delà du don, vous pouvez devenir membre du Collège, proposer un partenariat
+    institutionnel ou soumettre une réflexion scientifique à l'Académie.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn gold large" href="index.html#contribuer">Autres formes d'engagement</a>
+      <a class="btn ghost-light large" href="index.html#reflexion">Soumettre une réflexion</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div>
+      <img class="foot-logo" src="assets/img/logo_blanc.png" alt="AADP">
+      <p style="max-width:34ch">L'espace scientifique consacré au droit public, à la
+      gouvernance constitutionnelle et à l'État de droit en Afrique francophone.</p>
+    </div>
+    <div>
+      <h4>L'Académie</h4>
+      <ul>
+        <li><a href="index.html#academie">À propos</a></li>
+        <li><a href="index.html#axes">Axes de réflexion</a></li>
+        <li><a href="index.html#gouvernance">Membres du conseil</a></li>
+        <li><a href="index.html#evenements">Événements</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Soutenir</h4>
+      <ul>
+        <li><a href="faire-un-don.html">Faire un don</a></li>
+        <li><a href="index.html#contribuer">Devenir membre</a></li>
+        <li><a href="index.html#contribuer">Partenariat</a></li>
+        <li><a href="index.html#reflexion">Soumettre une réflexion</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@afdp.com">contact@afdp.com</a></li>
+        <li>Fleuve Congo Hôtel</li>
+        <li>Kinshasa · RD Congo</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="footline">
+      <span>© 2026 Académie Africaine de Droit Public — Tous droits réservés.</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Burger menu
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+
+// Quick donate: sync with form
+const qdFreqBtns=document.querySelectorAll('[data-qd-freq]');
+const qdAmtBtns=document.querySelectorAll('[data-qd-amt]');
+let qdFreq='once', qdAmt=50;
+qdFreqBtns.forEach(b=>b.addEventListener('click',()=>{
+  qdFreqBtns.forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  qdFreq=b.dataset.qdFreq;
+}));
+qdAmtBtns.forEach(b=>b.addEventListener('click',()=>{
+  qdAmtBtns.forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  qdAmt=parseInt(b.dataset.qdAmt);
+  document.getElementById('qdCustom').value='';
+}));
+document.getElementById('qdCustom').addEventListener('input',(e)=>{
+  const v=parseInt(e.target.value);
+  if(v>0){ qdAmtBtns.forEach(x=>x.classList.remove('active')); qdAmt=v; }
+});
+document.getElementById('qdContinue').addEventListener('click',()=>{
+  // Sync into main form
+  const freqBtn=document.querySelector(`.freq-toggle [data-freq="${qdFreq}"]`);
+  document.querySelectorAll('.freq-toggle button').forEach(x=>x.classList.remove('active'));
+  freqBtn.classList.add('active');
+  currentFreq=qdFreq;
+
+  const amtBtn=document.querySelector(`#amountBtns [data-amt="${qdAmt}"]`);
+  document.querySelectorAll('#amountBtns button').forEach(x=>x.classList.remove('active'));
+  if(amtBtn){amtBtn.classList.add('active'); currentAmt=qdAmt;}
+  else{document.getElementById('customAmt').value=qdAmt; currentAmt=qdAmt;}
+  updateTotal();
+});
+
+// Main form state
+let currentFreq='once', currentAmt=50, currentCur='USD', currentPM='orange';
+
+// Frequency toggle
+document.querySelectorAll('.freq-toggle button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.freq-toggle button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentFreq=b.dataset.freq;
+    updateTotal();
+  });
+});
+
+// Currency toggle
+document.querySelectorAll('.cur-toggle button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.cur-toggle button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentCur=b.dataset.cur;
+    document.getElementById('curPrefix').textContent=currentCur;
+    document.getElementById('totalCur').textContent=currentCur;
+    // Adjust presets when switching to CDF (rough conversion — display only)
+    const amtBtns=document.querySelectorAll('#amountBtns button');
+    const presets=currentCur==='USD'
+      ? [25,50,100,250,500,1000,2500,5000]
+      : [50000,100000,250000,500000,1000000,2500000,5000000,10000000];
+    amtBtns.forEach((btn,i)=>{
+      btn.dataset.amt=presets[i];
+      btn.textContent=presets[i].toLocaleString('fr-FR');
+    });
+    // Reset selection to second preset
+    amtBtns.forEach(x=>x.classList.remove('active'));
+    amtBtns[1].classList.add('active');
+    currentAmt=presets[1];
+    updateTotal();
+  });
+});
+
+// Amount buttons
+document.querySelectorAll('#amountBtns button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#amountBtns button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    currentAmt=parseInt(b.dataset.amt);
+    document.getElementById('customAmt').value='';
+    updateTotal();
+  });
+});
+document.getElementById('customAmt').addEventListener('input',(e)=>{
+  const v=parseInt(e.target.value);
+  if(v>0){
+    document.querySelectorAll('#amountBtns button').forEach(x=>x.classList.remove('active'));
+    currentAmt=v;
+    updateTotal();
+  }
+});
+
+// Payment method
+const pmLabels={orange:'Orange Money',mpesa:'M-Pesa',airtel:'Airtel Money',visa:'Visa',mastercard:'Mastercard',amex:'American Express'};
+document.querySelectorAll('input[name="pm"]').forEach(r=>{
+  r.addEventListener('change',()=>{
+    currentPM=r.value;
+    document.getElementById('payWith').textContent=pmLabels[currentPM];
+    // Hide phone field for card payments
+    const phone=document.getElementById('phoneField');
+    if(['visa','mastercard','amex'].includes(currentPM)){
+      phone.style.display='none';
+      document.getElementById('d-tel').required=false;
+    } else {
+      phone.style.display='block';
+      document.getElementById('d-tel').required=true;
+    }
+  });
+});
+
+// Total update
+function updateTotal(){
+  document.getElementById('totalAmt').textContent=currentAmt.toLocaleString('fr-FR');
+  document.getElementById('freqSuffix').textContent=currentFreq==='monthly'?' /mois':'';
+}
+updateTotal();
+
+// Form submit (demo — connect to gateway)
+document.getElementById('donateForm').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const f=e.target;
+  if(!f.checkValidity()){f.reportValidity();return;}
+  document.getElementById('formOk').style.display='block';
+  document.getElementById('formOk').scrollIntoView({behavior:'smooth',block:'center'});
+  // In production, call your gateway here:
+  //   FlutterwaveCheckout({...})  for Mobile Money + cards
+  //   or CinetPay, PayDunya, MaxiCash for Congolese Mobile Money
+});
+</script>
+</body>
+</html>
