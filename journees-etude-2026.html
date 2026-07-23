@@ -1,135 +1,662 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Programme détaillé — Journées d'Étude 2026</title>
-<style>
-:root{
-  --bordeaux:#43191A;
-  --bordeaux-2:#5C2323;
-  --or:#C9932B;
-  --or-clair:#E0AE45;
-  --ivoire:#FAF6EF;
-  --blanc:#fff;
-  --grain:#F3ECDF;
-  --encre:#221C18;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  background:var(--ivoire);
-  color:var(--encre);
-  line-height:1.6;
-}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.topbar{background:var(--bordeaux);color:#EAD9C4;font-size:.8rem}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:.45rem;padding-bottom:.45rem;gap:1rem}
-header.site{
-  background:var(--blanc);
-  border-bottom:1px solid rgba(67,25,26,.14);
-  position:sticky;top:0;z-index:50;
-}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
-.brand{display:flex;align-items:center;gap:1rem}
-.brand img{height:72px;width:auto;display:block}
-.hero{
-  background:linear-gradient(160deg,var(--bordeaux) 0%,#351314 60%,#2A0F10 100%);
-  color:var(--blanc);
-  padding:4.5rem 0 3rem;
-}
-.hero h1{font-size:clamp(2.2rem,4vw,3.4rem);margin:0 0 1rem;font-family:Georgia,serif}
-.hero p{max-width:72ch;margin:0 0 1.5rem}
-.hero .tag{display:inline-block;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-main{padding:3rem 0 5rem}
-.card{background:var(--blanc);border:1px solid rgba(67,25,26,.08);border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:1.6rem}
-section + section{margin-top:2rem}
-section h2{margin:0 0 1rem;font-size:1.65rem;color:var(--bordeaux);font-family:Georgia,serif}
-.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700;color:var(--or);margin-bottom:.5rem}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.day{background:var(--grain);border-radius:14px;padding:1rem}
-.day strong{display:block;color:var(--bordeaux);margin-bottom:.35rem}
-.day span{font-size:.9rem;color:#5c4c43}
-.agenda{display:grid;gap:1rem}
-.session{background:#fff;border-left:4px solid var(--or);padding:1rem 1rem 1rem 1.15rem;border-radius:12px}
-.session .time{font-weight:700;color:var(--bordeaux)}
-.session .type{font-weight:700;color:var(--or);text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;margin-bottom:.35rem}
-.btn{
-  display:inline-block;background:var(--or);color:var(--bordeaux);font-weight:700;
-  padding:.9rem 1.2rem;border-radius:999px;text-decoration:none;
-}
-.btn.light{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff}
-.muted{color:#665d54}
-@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.}
-@media (max-width:640px){.grid{grid-template-columns:1fr}.}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AADP · Les Réformes Constitutionnelles en Afrique Noire Francophone — 1ʳᵉ Édition des Journées d'Étude</title>
+  <meta name="description" content="Première édition des Journées d'Étude de l'Académie Africaine de Droit Public (AADP). Du 7 au 11 septembre 2026, Fleuve Congo Hôtel, Kinshasa. Un rendez-vous scientifique majeur pour penser l'avenir constitutionnel du continent." />
+  <meta name="theme-color" content="#43191A" />
+  <link rel="canonical" href="https://www.afdp.com/" />
+  <link rel="icon" type="image/png" href="assets/img/aadp-logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/aadp-logo.png" />
+  <meta property="og:image" content="assets/img/aadp-logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Les Réformes Constitutionnelles en Afrique Noire Francophone — AADP" />
+  <meta property="og:description" content="1ʳᵉ Édition des Journées d'Étude de l'Académie Africaine de Droit Public · 7–11 septembre 2026 · Fleuve Congo Hôtel, Kinshasa." />
+  <meta property="og:site_name" content="Académie Africaine de Droit Public" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- SEO structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    "name": "Les Réformes Constitutionnelles en Afrique Noire Francophone — 1ʳᵉ Édition des Journées d'Étude de l'AADP",
+    "startDate": "2026-09-07",
+    "endDate": "2026-09-11",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Fleuve Congo Hôtel",
+      "address": { "@type": "PostalAddress", "addressLocality": "Kinshasa", "addressCountry": "CD" }
+    },
+    "organizer": { "@type": "Organization", "name": "Académie Africaine de Droit Public (AADP)", "url": "https://www.afdp.com" },
+    "description": "Programme intensif de formation consacré aux mutations contemporaines du constitutionnalisme africain."
+  }
+  </script>
 </head>
 <body>
-<div class="topbar">
-  <div class="wrap">
-    <span>Académie Africaine de Droit Public</span>
-    <div class="right"><a href="mailto:contact@aadp-afrique.org">contact@aadp-afrique.org</a><span>Kinshasa · RD Congo</span></div>
-  </div>
-</div>
 
-<header class="site">
-  <div class="wrap">
-    <div class="brand">
-      <img src="assets/img/logo_noire.png" alt="Logo AADP">
-    </div>
+<!-- =================== HEADER =================== -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="AADP — Académie Africaine de Droit Public, Accueil">
+        <img class="brand__logo" src="assets/img/aadp-logo.png" alt="Emblème de l'Académie Africaine de Droit Public" width="46" height="46" />
+        <span class="brand__text">
+          <span class="brand__acr">AADP</span>
+          <span class="brand__full">Droit Public</span>
+        </span>
+      </a>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#presentation">Présentation</a></li>
+          <li><a class="nav__link" href="#axes">Axes</a></li>
+          <li><a class="nav__link" href="#programme">Programme</a></li>
+          <li><a class="nav__link" href="#intervenants">Intervenants</a></li>
+          <li><a class="nav__link" href="#public">Public</a></li>
+          <li><a class="nav__link" href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="#inscription">S'inscrire</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
   </div>
 </header>
 
+<main id="accueil">
+
+<!-- =================== HERO =================== -->
 <section class="hero">
-  <div class="wrap">
-    <div class="tag">Journées d'Étude 2026</div>
-    <h1>Programme détaillé</h1>
-    <p>
-      Cinq journées, une progression pédagogique. Articulé autour des étapes Comprendre · Comparer · Réformer · Négocier · Proposer,
-      le programme combine approches théoriques et exercices pratiques, de l'analyse des dynamiques constitutionnelles à la formulation
-      de propositions concrètes de réforme.
-    </p>
-    <a class="btn light" href="mailto:contact@aadp-afrique.org?subject=Inscription%20aux%20Journ%C3%A9es%20d'%C3%89tude%202026">S'inscrire</a>
+  <div class="hero__maze" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">
+          <svg class="pillar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 9 L12 3 L21 9 Z M5 9 V18 M10 9 V18 M14 9 V18 M19 9 V18 M3 21 H21"/></svg>
+          1ʳᵉ Édition · Journées d'Étude de l'AADP
+        </p>
+        <h1 class="hero__title">Les Réformes Constitutionnelles<br><em>en Afrique Noire Francophone</em></h1>
+        <p class="hero__sub">Repenser l'ordre constitutionnel, garantir la stabilité, refonder l'État de droit.</p>
+
+        <div class="hero__meta">
+          <span class="hero__chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+            7 au 11 septembre 2026
+          </span>
+          <span class="hero__chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Fleuve Congo Hôtel · Kinshasa
+          </span>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#inscription">S'inscrire</a>
+          <a class="btn btn--ghost-light btn--lg" href="#programme">
+            Découvrir le programme
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Illustration : balance de la justice devant l'Afrique -->
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 460 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E9D5A6"/><stop offset="0.5" stop-color="#C79A3B"/><stop offset="1" stop-color="#9C7327"/>
+            </linearGradient>
+            <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#D9B25A"/><stop offset="1" stop-color="#B0842E"/>
+            </linearGradient>
+          </defs>
+          <!-- Carte de l'Afrique stylisée -->
+          <path d="M196 44c26-6 44 6 64 4 14-2 26-10 34 0 6 8-2 20 4 30 6 9 20 10 22 24 2 12-10 20-8 32 3 16 20 24 18 42-2 15-18 20-22 34-5 16 6 33-4 47-9 13-28 12-40 22-13 11-16 32-33 36-15 4-27-9-42-12-16-3-33 4-46-6-12-9-9-28-18-40-9-13-27-16-32-32-5-15 8-29 6-44-2-16-18-27-14-44 3-15 21-19 28-32 6-12 0-28 10-38 9-9 24-4 35-11 12-8 15-27 34-31Z" fill="url(#gold)" opacity="0.14" stroke="url(#gold)" stroke-width="1.4" stroke-opacity="0.6"/>
+          <path d="M196 44c26-6 44 6 64 4 14-2 26-10 34 0 6 8-2 20 4 30 6 9 20 10 22 24 2 12-10 20-8 32 3 16 20 24 18 42-2 15-18 20-22 34-5 16 6 33-4 47-9 13-28 12-40 22-13 11-16 32-33 36-15 4-27-9-42-12-16-3-33 4-46-6-12-9-9-28-18-40-9-13-27-16-32-32-5-15 8-29 6-44-2-16-18-27-14-44 3-15 21-19 28-32 6-12 0-28 10-38 9-9 24-4 35-11 12-8 15-27 34-31Z" fill="none" stroke="url(#gold)" stroke-width="0.6" stroke-dasharray="2 5" stroke-opacity="0.5"/>
+
+          <!-- Balance de la justice -->
+          <g stroke="url(#goldSoft)" stroke-width="2.4" stroke-linecap="round" fill="none">
+            <!-- Mât -->
+            <path d="M230 96 V360"/>
+            <!-- Pommeau -->
+            <circle cx="230" cy="90" r="7" fill="url(#gold)" stroke="none"/>
+            <!-- Fléau -->
+            <path d="M120 150 H340"/>
+            <!-- Suspentes gauche -->
+            <path d="M120 150 L96 214 M120 150 L144 214"/>
+            <!-- Suspentes droite -->
+            <path d="M340 150 L316 214 M340 150 L364 214"/>
+            <!-- Base -->
+            <path d="M188 360 H272 M200 360 c0 14 -8 20 -18 26 H308 c-10 -6 -18 -12 -18 -26"/>
+          </g>
+          <!-- Plateaux -->
+          <path d="M84 214 H156 c-4 26 -28 40 -36 40 s-32 -14 -36 -40Z" fill="url(#gold)" opacity="0.22" stroke="url(#goldSoft)" stroke-width="2"/>
+          <path d="M304 214 H376 c-4 26 -28 40 -36 40 s-32 -14 -36 -40Z" fill="url(#gold)" opacity="0.22" stroke="url(#goldSoft)" stroke-width="2"/>
+          <!-- Étoile / repère panafricain -->
+          <path d="M230 40 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1Z" fill="url(#gold)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span>Défiler</span><span class="line"></span></div>
+</section>
+
+<!-- =================== PRÉSENTATION =================== -->
+<section class="section section--paper" id="presentation">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__lead reveal">
+        <p class="overline">L'Académie & la 1ʳᵉ Édition</p>
+        <h2 class="display">Un cadre de formation avancée pour penser l'avenir constitutionnel du continent.</h2>
+        <div class="about__body">
+          <p>L'<strong>Académie Africaine de Droit Public (AADP)</strong> réunit universitaires, magistrats, hauts fonctionnaires et responsables publics autour d'une même exigence : doter le continent d'un espace scientifique consacré à la conduite des réformes constitutionnelles. Sa première édition des <em>Journées d'Étude</em> inaugure un rendez-vous appelé à faire référence.</p>
+          <p>Depuis 2020, l'Afrique connaît une séquence politique et institutionnelle exceptionnelle. Coups d'État, transitions politiques, référendums constitutionnels et débats sur la limitation des mandats témoignent de l'actualité brûlante de la question constitutionnelle. La Constitution demeure un instrument privilégié de transformation de l'État, de régulation des conflits politiques et de recherche de stabilité institutionnelle.</p>
+          <p>Cette actualité met en lumière le rôle croissant des juridictions constitutionnelles — véritables gardiennes de l'ordre constitutionnel — comme l'ont illustré les crises du Sénégal, du Kenya ou de la République démocratique du Congo. Pourtant, les espaces de formation spécialisés consacrés aux réformes constitutionnelles demeurent rares. Cette première édition entend combler ce manque, en formant une nouvelle génération de décideurs capables de conduire des réformes crédibles, inclusives et adaptées aux réalités africaines.</p>
+        </div>
+      </div>
+
+      <aside class="about__aside reveal" data-delay="1">
+        <div class="stat-card">
+          <div class="stat-card__num">05</div>
+          <div class="stat-card__label">Journées d'étude — Comprendre, Comparer, Réformer, Négocier, Proposer</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__num">05</div>
+          <div class="stat-card__label">Axes scientifiques structurant les travaux</div>
+        </div>
+        <div class="pull-quote">
+          <div class="pull-quote__mark" aria-hidden="true">“</div>
+          <p>Un rendez-vous scientifique majeur pour penser l'avenir constitutionnel du continent.</p>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
-<main>
-  <div class="wrap">
-    <section>
-      <div class="kicker">Programme</div>
-      <h2>Progression pédagogique de la semaine</h2>
-      <div class="grid">
-        <div class="day"><strong>Journée 1 · 7 sept.</strong><span>Comprendre</span></div>
-        <div class="day"><strong>Journée 2 · 8 sept.</strong><span>Comparer</span></div>
-        <div class="day"><strong>Journée 3 · 9 sept.</strong><span>Réformer</span></div>
-        <div class="day"><strong>Journée 4 · 10 sept.</strong><span>Négocier</span></div>
-        <div class="day"><strong>Journée 5 · 11 sept.</strong><span>Proposer</span></div>
-      </div>
-    </section>
+<!-- =================== OBJECTIFS =================== -->
+<section class="section section--tint" id="objectifs">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Objectifs visés</p>
+      <h2 class="section-title">Renforcer les capacités des acteurs de la réforme.</h2>
+      <p class="section-intro">Un programme intensif centré sur les mutations contemporaines du constitutionnalisme africain et sur le renforcement des capacités de celles et ceux appelés à concevoir, conduire ou accompagner les réformes institutionnelles.</p>
+    </div>
 
-    <section>
-      <div class="kicker">Journée 1</div>
-      <h2>Comprendre</h2>
-      <div class="agenda">
-        <div class="session"><div class="time">09h00 – 10h00</div><div class="type">Cérémonie</div><div>Cérémonie d'ouverture</div><div class="muted">Autorités envisagées : Président de l'Assemblée nationale, Première Ministre, Président de la Cour constitutionnelle.</div></div>
-        <div class="session"><div class="time">10h00 – 11h30</div><div class="type">Master class</div><div>Trente ans de réformes constitutionnelles en Afrique : bilan et perspectives</div><div class="muted">Pr. Abdoulaye Soma</div></div>
-        <div class="session"><div class="time">11h45 – 13h15</div><div class="type">Master class</div><div>Les réformes constitutionnelles en Afrique : entre succès et échec</div><div class="muted">Pr. Oumarou Narey</div></div>
-        <div class="session"><div class="time">14h30 – 16h00</div><div class="type">Master class</div><div>Cartographie des réformes constitutionnelles africaines depuis 1990</div><div class="muted">Pr. Evariste Boshab</div></div>
-        <div class="session"><div class="time">16h15 – 17h30</div><div class="type">Atelier pratique</div><div>Atelier sur les réformes constitutionnelles — Études de cas : Côte d'Ivoire, Congo-Brazzaville, RCA, Togo</div><div class="muted">Groupes dirigés par Pr. Marcel Wetsh'Okonda (Kinshasa), Pr. Trésor Makunya (Prétoria), Me Chancel Funga (Nice), Dr. Elysée Hator (Paris-Saclay)</div></div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="kicker">Inscription</div>
-      <h2>Tu peux t'inscrire</h2>
-      <p>
-        Pour demander votre participation aux Journées d'Étude 2026, contactez l'équipe de l'AADP
-        par e-mail et précisez votre statut, votre institution et votre intérêt pour le programme.
-      </p>
-      <a class="btn" href="mailto:contact@aadp-afrique.org?subject=Inscription%20aux%20Journ%C3%A9es%20d'%C3%89tude%202026">Envoyer une demande d'inscription</a>
-    </section>
+    <div class="obj-grid">
+      <article class="obj-card reveal">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M7 9v5c0 1.5 2.2 3 5 3s5-1.5 5-3V9"/><path d="M21 7v6"/></svg></div>
+        <h3>Analyser les dynamiques constitutionnelles</h3>
+        <p>Comprendre les processus de production, de révision et de transformation des Constitutions africaines, et identifier les facteurs de réussite ou d'échec d'un processus constituant.</p>
+      </article>
+      <article class="obj-card reveal" data-delay="1">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v3M12 21v-3M3 12h3M21 12h-3"/><circle cx="12" cy="12" r="4"/><path d="M12 8V4"/></svg></div>
+        <h3>Consolider l'État de droit</h3>
+        <p>Approfondir la compréhension des enjeux liés aux processus électoraux, à la stabilité institutionnelle et à la consolidation de l'État de droit sur le continent.</p>
+      </article>
+      <article class="obj-card reveal" data-delay="2">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v18M7 8l5-4 5 4M6 8v9M18 8v9M4 21h16"/></svg></div>
+        <h3>Éclairer la justice constitutionnelle</h3>
+        <p>Examiner le rôle des juridictions constitutionnelles dans la régulation des rapports de pouvoir et la protection des normes constitutionnelles.</p>
+      </article>
+      <article class="obj-card reveal">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div>
+        <h3>Articuler droit interne et normes régionales</h3>
+        <p>Favoriser une meilleure compréhension des interactions entre les Constitutions africaines, le droit international et les normes régionales de l'Union africaine.</p>
+      </article>
+      <article class="obj-card reveal" data-delay="1">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 0 1 0 5M18 14c2.4.8 4 3 4 6"/></svg></div>
+        <h3>Former une nouvelle génération de décideurs</h3>
+        <p>Renforcer les capacités des jeunes chercheurs, hauts fonctionnaires et responsables publics, et contribuer à former des décideurs capables de mettre en œuvre des réformes adaptées.</p>
+      </article>
+      <article class="obj-card reveal" data-delay="2">
+        <div class="obj-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M16 3l3 1-1 3"/></svg></div>
+        <h3>Diffuser une culture de gouvernance</h3>
+        <p>Encourager une culture de gouvernance constitutionnelle fondée sur la responsabilité publique, l'éthique institutionnelle, la stabilité des institutions et le respect des principes démocratiques.</p>
+      </article>
+    </div>
   </div>
+</section>
+
+<!-- =================== AXES SCIENTIFIQUES =================== -->
+<section class="section section--paper" id="axes">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Axes scientifiques</p>
+      <h2 class="section-title">Cinq axes pour structurer la réflexion.</h2>
+      <p class="section-intro">Chaque axe articule une problématique générale et une série de sous-thèmes. Cliquez pour découvrir le détail des travaux.</p>
+    </div>
+
+    <div class="axes-grid" id="axesGrid">
+      <button class="axis-card reveal" data-axis="1">
+        <span class="axis-card__num">Axe 01</span>
+        <span class="axis-card__title">Faire et réformer les Constitutions</span>
+        <span class="axis-card__foot">Acteurs, méthodes et controverses <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="axis-card reveal" data-delay="1" data-axis="2">
+        <span class="axis-card__num">Axe 02</span>
+        <span class="axis-card__title">Élections, alternance politique et légitimité</span>
+        <span class="axis-card__foot">Restaurer la confiance démocratique <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="axis-card reveal" data-delay="2" data-axis="3">
+        <span class="axis-card__num">Axe 03</span>
+        <span class="axis-card__title">Gouverner efficacement</span>
+        <span class="axis-card__foot">Régimes, équilibre des pouvoirs, stabilité <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="axis-card reveal" data-axis="4">
+        <span class="axis-card__num">Axe 04</span>
+        <span class="axis-card__title">Justice constitutionnelle</span>
+        <span class="axis-card__foot">Les juges face au pouvoir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="axis-card axis-card--wide reveal" data-delay="1" data-axis="5">
+        <span class="axis-card__lead">
+          <span class="axis-card__num">Axe 05</span>
+          <span class="axis-card__title">Réformer l'État africain face aux nouveaux défis du XXIᵉ siècle</span>
+        </span>
+        <span class="axis-card__foot">Sécurité, climat, numérique, souveraineté <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROGRAMME =================== -->
+<section class="section section--tint" id="programme">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Programme détaillé</p>
+      <h2 class="section-title">Cinq journées, une progression pédagogique.</h2>
+      <p class="section-intro">Articulé autour des étapes <strong>Comprendre · Comparer · Réformer · Négocier · Proposer</strong>, le programme combine approches théoriques et exercices pratiques, de l'analyse des dynamiques constitutionnelles à la formulation de propositions concrètes de réforme.</p>
+    </div>
+
+    <div class="program reveal">
+      <div class="program__tabs" role="tablist" aria-label="Journées du programme">
+        <button class="program__tab is-active" role="tab" aria-selected="true" data-day="1"><small>Journée 1 · 7 sept.</small>Comprendre</button>
+        <button class="program__tab" role="tab" aria-selected="false" data-day="2"><small>Journée 2 · 8 sept.</small>Comparer</button>
+        <button class="program__tab" role="tab" aria-selected="false" data-day="3"><small>Journée 3 · 9 sept.</small>Réformer</button>
+        <button class="program__tab" role="tab" aria-selected="false" data-day="4"><small>Journée 4 · 10 sept.</small>Négocier</button>
+        <button class="program__tab" role="tab" aria-selected="false" data-day="5"><small>Journée 5 · 11 sept.</small>Proposer</button>
+      </div>
+
+      <!-- Journée 1 -->
+      <div class="program__day is-active" data-day="1" role="tabpanel">
+        <div class="day-head"><span class="day-head__step">Journée 1 — Comprendre</span><h3 class="day-head__title">État des lieux et enjeux</h3></div>
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-item__time">09h00 – 10h00</span><span class="tl-item__format">Cérémonie</span><p class="tl-item__title">Cérémonie d'ouverture</p><p class="tl-item__people">Autorités envisagées : <strong>Président de l'Assemblée nationale</strong>, <strong>Première Ministre</strong>, <strong>Président de la Cour constitutionnelle</strong>.</p></li>
+          <li class="tl-item"><span class="tl-item__time">10h00 – 11h30</span><span class="tl-item__format">Master class</span><p class="tl-item__title">Trente ans de réformes constitutionnelles en Afrique : bilan et perspectives</p><p class="tl-item__people"><strong>Pr. Abdoulaye Soma</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">11h45 – 13h15</span><span class="tl-item__format">Master class</span><p class="tl-item__title">Les réformes constitutionnelles en Afrique : entre succès et échec</p><p class="tl-item__people"><strong>Pr. Oumarou Narey</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">14h30 – 16h00</span><span class="tl-item__format">Master class</span><p class="tl-item__title">Cartographie des réformes constitutionnelles africaines depuis 1990</p><p class="tl-item__people"><strong>Pr. Evariste Boshab</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">16h15 – 17h30</span><span class="tl-item__format">Atelier pratique</span><p class="tl-item__title">Atelier sur les réformes constitutionnelles — Études de cas : Côte d'Ivoire, Congo-Brazzaville, RCA, Togo</p><p class="tl-item__people">Groupes dirigés par <strong>Pr. Marcel Wetsh'Okonda</strong> (Kinshasa), <strong>Pr. Trésor Makunya</strong> (Prétoria), <strong>Me Chancel Funga</strong> (Nice), <strong>Dr. Elysée Hator</strong> (Paris-Saclay)</p></li>
+        </ol>
+      </div>
+
+      <!-- Journée 2 -->
+      <div class="program__day" data-day="2" role="tabpanel" hidden>
+        <div class="day-head"><span class="day-head__step">Journée 2 — Comparer</span><h3 class="day-head__title">Rédaction de la Constitution, élections et alternance</h3></div>
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-item__time">09h00 – 11h00</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">La légistique constitutionnelle : écriture de la norme constitutionnelle</p><p class="tl-item__people"><strong>Pr. Pierre de Montalivet</strong> (Université Paris-Est Créteil)</p></li>
+          <li class="tl-item"><span class="tl-item__time">11h15 – 12h45</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Le portrait des réformes constitutionnelles en Afrique : révision et changement de Constitution</p><p class="tl-item__people"><strong>Dr. Guelord LUEMA</strong> (Université Paris-Est Créteil · Président et fondateur de l'Académie)</p></li>
+          <li class="tl-item"><span class="tl-item__time">14h00 – 16h00</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Alternance politique et limitation des mandats présidentiels : regard croisé</p><p class="tl-item__people"><strong>Pr. Jean-Pierre Camby</strong> (Paris-Saclay), <strong>Dr. Amadou IMERANE</strong> (Niamey · Direction de l'Académie), <strong>M. David Aloco</strong> (Bordeaux)</p></li>
+          <li class="tl-item"><span class="tl-item__time">16h15 – 17h45</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Réformes électorales et gouvernance démocratique</p><p class="tl-item__people"><strong>Dr. Gilles Badet</strong> (Abomey-Calavi), <strong>Me Ronsard Malonda</strong> (Direction de l'Académie · contentieux électoral)</p></li>
+        </ol>
+      </div>
+
+      <!-- Journée 3 -->
+      <div class="program__day" data-day="3" role="tabpanel" hidden>
+        <div class="day-head"><span class="day-head__step">Journée 3 — Réformer</span><h3 class="day-head__title">Transitions et refondation</h3></div>
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-item__time">09h00 – 11h00</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Transitions constitutionnelles en Afrique contemporaine : regard croisé</p><p class="tl-item__people"><strong>Pr. Jean-Louis Esambo</strong> (Kinshasa), <strong>Pr. Éric Ngango</strong> (Douala)</p></li>
+          <li class="tl-item"><span class="tl-item__time">11h15 – 12h30 · 14h00 – 15h45</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">L'encadrement des réformes constitutionnelles par le droit de l'Union africaine · Organisations régionales face aux changements anticonstitutionnels</p><p class="tl-item__people"><strong>Pr. Blaise Tchikaya</strong>, Président de la Cour africaine des droits de l'homme et des peuples ; <strong>Pr. Kazadi Mpiana</strong> (Université Nouvelle Horizon)</p></li>
+          <li class="tl-item"><span class="tl-item__time">16h00 – 17h30</span><span class="tl-item__format">Étude de cas</span><p class="tl-item__title">Les coups d'État militaires : Mali, Burkina Faso, Niger, Gabon, Tchad</p><p class="tl-item__people">Groupes dirigés par <strong>Dr. Isaac Muzigwa</strong> (Toulon), <strong>Dr. Puis D'joli</strong> (Paris 13), <strong>M. Jonas Tshibayi</strong> (Strasbourg)</p></li>
+          <li class="tl-item"><span class="tl-item__time">Production</span><span class="tl-item__format">Atelier</span><p class="tl-item__title">Note stratégique : restaurer l'ordre constitutionnel et élaboration de la Charte de transition</p><p class="tl-item__people">Groupes dirigés par <strong>Pr. Oumarou Narey</strong>, <strong>Pr. Kazadi Mpiana</strong> (Université Nouveaux Horizons), <strong>Dr. Amadou IMERANE</strong> (Université de Niamey)</p></li>
+        </ol>
+      </div>
+
+      <!-- Journée 4 -->
+      <div class="program__day" data-day="4" role="tabpanel" hidden>
+        <div class="day-head"><span class="day-head__step">Journée 4 — Négocier</span><h3 class="day-head__title">Justice constitutionnelle et ingénierie constitutionnelle</h3></div>
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-item__time">09h00 – 10h30</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Rôle du juge constitutionnel dans les réformes constitutionnelles</p><p class="tl-item__people"><strong>Pr. Dieudonné Kaluba</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">10h45 – 12h15</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Ingénierie constitutionnelle : référendum, commissions, rédaction du texte constitutionnel</p><p class="tl-item__people"><strong>Pr. Jacques D'joli</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">14h00 – 15h30</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">La légistique constitutionnelle en RDC : l'écriture de la norme constitutionnelle en RDC</p><p class="tl-item__people"><strong>Pr. François Bokona</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">15h45 – 17h00</span><span class="tl-item__format">Séminaire</span><p class="tl-item__title">Les nouveaux défis du constitutionnalisme en Afrique — Les réformes constitutionnelles à l'ère du numérique : intelligence artificielle, souveraineté numérique et protection des droits fondamentaux en Afrique</p><p class="tl-item__people"><strong>Pr. Sébastien Lath</strong>, <strong>M. Brozeck Kandolo</strong></p></li>
+        </ol>
+      </div>
+
+      <!-- Journée 5 -->
+      <div class="program__day" data-day="5" role="tabpanel" hidden>
+        <div class="day-head"><span class="day-head__step">Journée 5 — Proposer</span><h3 class="day-head__title">Atelier pratique</h3></div>
+        <ol class="timeline">
+          <li class="tl-item"><span class="tl-item__time">09h00 – 10h30</span><span class="tl-item__format">Atelier</span><p class="tl-item__title">Processus de réforme constitutionnelle : diagnostic, propositions, opportunité et stratégie de mise en œuvre</p><p class="tl-item__people">Dirigé par <strong>Pr. Ngondankoy</strong> (Université de Kinshasa), <strong>Dr. Gilles Badet</strong> (Université d'Abomey-Calavi)</p></li>
+          <li class="tl-item"><span class="tl-item__time">11h15 – 13h30</span><span class="tl-item__format">Atelier</span><p class="tl-item__title">Élaboration du projet de réforme de la Constitution : exposé des motifs et compromis politique</p><p class="tl-item__people">Dirigé par <strong>Pr. François Bokona</strong> (Université de Kinshasa), <strong>Pr. Telesphore ONDO</strong> (Université Omar Bongo)</p></li>
+          <li class="tl-item"><span class="tl-item__time">14h00 – 15h00</span><span class="tl-item__format">Présentation</span><p class="tl-item__title">Présentation des projets élaborés : nouvelle Constitution · Charte constitutionnelle de transition</p><p class="tl-item__people"><strong>M. Jonas Tshibayi Ntumba</strong> (Université de Strasbourg), <strong>Dr. Amadou IMERANE</strong> (Université de Niamey)</p></li>
+          <li class="tl-item"><span class="tl-item__time">15h00 – 16h30</span><span class="tl-item__format">Jury</span><p class="tl-item__title">Évaluation des projets : légitimité, respect des valeurs démocratiques, garantie des droits fondamentaux et respect des principes de l'État de droit</p><p class="tl-item__people">Jury : <strong>Pr. Jean-Louis Esambo</strong>, <strong>Pr. François Bokona</strong>, <strong>Dr. Sébastien Lath</strong>, <strong>Pr. Abdoulaye Soma</strong>, <strong>Dr. Wasenda</strong></p></li>
+          <li class="tl-item"><span class="tl-item__time">16h30 – 17h30</span><span class="tl-item__format">Clôture</span><p class="tl-item__title">Rapport de synthèse, remise des certificats et mot de clôture</p><p class="tl-item__people">Rapport de synthèse par <strong>Pr. Oumarou Narey</strong> (Université de Niamey)</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== INTERVENANTS =================== -->
+<section class="section section--paper" id="intervenants">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Intervenants</p>
+      <h2 class="section-title">Universitaires, magistrats et praticiens de référence.</h2>
+      <p class="section-intro">Une réunion exceptionnelle de professeurs, présidents de juridiction et experts venus de tout le continent et des grandes universités partenaires. Cliquez sur une fiche pour la biographie détaillée.</p>
+    </div>
+    <div class="speakers-grid" id="speakersGrid"><!-- injecté par JS --></div>
+    <p class="speakers-note">Et de nombreux autres universitaires et praticiens réunis dans les séminaires, masterclass et ateliers du programme.</p>
+  </div>
+</section>
+
+<!-- =================== PUBLIC CIBLE =================== -->
+<section class="section section--dark" id="public">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="overline overline--center">Public cible</p>
+      <h2 class="section-title">Un dialogue entre le monde académique et les praticiens.</h2>
+      <p class="section-intro">Ce programme s'adresse à un public diversifié, avec une attention particulière portée aux futurs décideurs et aux acteurs impliqués dans les processus de réforme.</p>
+    </div>
+
+    <div class="audience-grid">
+      <article class="audience reveal">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+        <h3>Doctorants & étudiants</h3>
+        <p>Doctorants, jeunes docteurs et étudiants en droit, science politique, relations internationales et disciplines connexes.</p>
+      </article>
+      <article class="audience reveal" data-delay="1">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 21h16M6 21v-8M18 21v-8M4 13h16l-8-6-8 6Z M12 3v4"/></svg></div>
+        <h3>Chercheurs</h3>
+        <p>Enseignants-chercheurs travaillant sur les questions constitutionnelles, institutionnelles et électorales africaines.</p>
+      </article>
+      <article class="audience reveal" data-delay="2">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3v18M7 8l5-4 5 4M6 8v9M18 8v9M4 21h16"/></svg></div>
+        <h3>Magistrats</h3>
+        <p>Magistrats, membres des juridictions constitutionnelles et personnels des administrations publiques.</p>
+      </article>
+      <article class="audience reveal" data-delay="3">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-5h6v5"/></svg></div>
+        <h3>Parlementaires</h3>
+        <p>Parlementaires, collaborateurs parlementaires, membres des commissions électorales et cadres des institutions de gouvernance.</p>
+      </article>
+      <article class="audience reveal">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="1"/><path d="M9 8V5a3 3 0 0 1 6 0v3M4 13h16"/></svg></div>
+        <h3>Hauts fonctionnaires</h3>
+        <p>Hauts fonctionnaires, conseillers juridiques des administrations et responsables de l'élaboration des politiques publiques.</p>
+      </article>
+      <article class="audience reveal" data-delay="1">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8 8 10 4.6-2 8-5 8-10V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Membres des juridictions</h3>
+        <p>Membres des cabinets présidentiels, gouvernementaux ou parlementaires participant aux processus de réforme institutionnelle.</p>
+      </article>
+      <article class="audience reveal" data-delay="2">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <h3>Responsables politiques</h3>
+        <p>Jeunes leaders, responsables politiques et acteurs publics appelés à exercer des fonctions de décision ou d'encadrement institutionnel.</p>
+      </article>
+      <article class="audience reveal" data-delay="3">
+        <div class="audience__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div>
+        <h3>Organisations internationales</h3>
+        <p>Responsables d'organisations régionales africaines, internationales et de la société civile actives dans la démocratie et l'État de droit.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =================== MÉTHODES =================== -->
+<section class="section section--paper" id="methodes">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Méthodes pédagogiques</p>
+      <h2 class="section-title">Articuler savoirs théoriques et compétences pratiques.</h2>
+    </div>
+    <div class="methods">
+      <div class="method reveal"><div class="method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M2 20h20M9 16v4M15 16v4"/></svg></div><div><h3>Conférences & masterclass</h3><p>Conférences magistrales et masterclass animées par des universitaires et praticiens.</p></div></div>
+      <div class="method reveal" data-delay="1"><div class="method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h12v16H4z"/><path d="M8 8h4M8 12h4M16 7l4 2-4 2"/></svg></div><div><h3>Études de cas</h3><p>Analyse d'expériences constitutionnelles africaines et ateliers de rédaction constitutionnelle.</p></div></div>
+      <div class="method reveal" data-delay="2"><div class="method__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c0-2.8 2.2-5 5-5M21 19c0-2.8-2.2-5-5-5M9 19h6"/></svg></div><div><h3>Tables rondes</h3><p>Tables rondes réunissant chercheurs, magistrats, responsables publics et organisations internationales.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== INSCRIPTION =================== -->
+<section class="section section--tint" id="inscription">
+  <div class="container">
+    <div class="reg">
+      <div class="reg__aside reveal">
+        <p class="overline">Inscription</p>
+        <h2 class="display">Rejoignez la première édition.</h2>
+        <p class="lede">Complétez le formulaire pour manifester votre intérêt. Notre secrétariat scientifique reviendra vers vous avec les modalités de participation et le dossier d'inscription.</p>
+        <div class="reg__points">
+          <div class="reg__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span><strong>7 au 11 septembre 2026</strong>Cinq journées d'étude intensives.</span></div>
+          <div class="reg__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><strong>Fleuve Congo Hôtel</strong>Kinshasa, République démocratique du Congo.</span></div>
+          <div class="reg__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M7 9v5c0 1.5 2.2 3 5 3s5-1.5 5-3V9"/></svg><span><strong>Certificat de participation</strong>Délivré à l'issue de la formation.</span></div>
+        </div>
+      </div>
+
+      <form class="form reveal" data-delay="1" id="regForm" novalidate>
+        <div class="form__fields" id="formFields">
+          <div class="form__row">
+            <div class="field"><label for="nom">Nom <span class="req">*</span></label><input type="text" id="nom" name="nom" autocomplete="family-name" required /></div>
+            <div class="field"><label for="prenom">Prénom <span class="req">*</span></label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required /></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+            <div class="field"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="pays">Pays <span class="req">*</span></label><input type="text" id="pays" name="pays" autocomplete="country-name" required /></div>
+            <div class="field"><label for="institution">Institution</label><input type="text" id="institution" name="institution" /></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="profession">Profession</label><input type="text" id="profession" name="profession" /></div>
+            <div class="field">
+              <label for="niveau">Niveau académique</label>
+              <select id="niveau" name="niveau">
+                <option value="">Sélectionner…</option>
+                <option>Licence</option><option>Master</option><option>Doctorat</option>
+                <option>Post-doctorat</option><option>Professeur</option><option>Praticien / Magistrat</option><option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Motivation, attentes ou questions…"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Valider mon inscription</button>
+          <p class="form__note">Les champs marqués d'un <span class="req">*</span> sont obligatoires. Vos données ne sont utilisées que pour le traitement de votre inscription.</p>
+        </div>
+
+        <div class="form__success" id="formSuccess" role="status">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+          <h3>Demande enregistrée</h3>
+          <p>Merci. Votre manifestation d'intérêt a bien été prise en compte — notre secrétariat scientifique vous recontactera prochainement.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FAQ =================== -->
+<section class="section section--paper" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="overline overline--center">Questions fréquentes</p>
+      <h2 class="section-title">Tout ce qu'il faut savoir.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span>Qui peut participer ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="faq__a"><p>Le programme s'adresse aux doctorants et étudiants avancés, enseignants-chercheurs, magistrats et membres des juridictions constitutionnelles, parlementaires, hauts fonctionnaires, responsables politiques ainsi qu'aux représentants d'organisations régionales et internationales. L'ambition est de créer un espace de dialogue entre le monde académique et les praticiens des institutions publiques.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span>Comment s'inscrire ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="faq__a"><p>Il suffit de compléter le formulaire d'inscription en ligne de cette page. Notre secrétariat scientifique vous adressera ensuite le dossier de participation, les modalités pratiques et la confirmation de votre place.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span>Un certificat est-il délivré ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="faq__a"><p>Oui. Un certificat de participation est remis aux participants à l'issue des cinq journées, lors de la cérémonie de clôture, après présentation et évaluation des projets élaborés en atelier.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span>Quels sont les frais ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="faq__a"><p>Les modalités financières et les éventuelles possibilités de prise en charge sont précisées dans le dossier d'inscription transmis après réception de votre demande. N'hésitez pas à contacter le secrétariat pour toute question spécifique.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span>Comment venir ?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="faq__a"><p>Les Journées d'Étude se tiennent au Fleuve Congo Hôtel, à Kinshasa (République démocratique du Congo). Les informations relatives à l'accès, à l'hébergement et aux facilités logistiques sont communiquées aux participants confirmés.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PARTENAIRES =================== -->
+<section class="section section--tint" id="partenaires">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="overline overline--center">Avec le concours de</p>
+      <h2 class="section-title">Nos partenaires institutionnels.</h2>
+    </div>
+    <div class="partners reveal">
+      <figure class="partner">
+        <div class="partner__mark partner__mark--wide"><img src="assets/img/partners/assemblee-nationale-rdc.png" alt="Logo de l'Assemblée nationale de la République démocratique du Congo" width="220" height="92" loading="lazy" /></div>
+        <figcaption class="partner__name">Assemblée nationale</figcaption>
+        <div class="partner__meta">République démocratique du Congo</div>
+      </figure>
+      <figure class="partner">
+        <div class="partner__mark"><img src="assets/img/partners/cour-constitutionnelle-rdc.jpg" alt="Logo de la Cour Constitutionnelle de la République démocratique du Congo" width="120" height="120" loading="lazy" /></div>
+        <figcaption class="partner__name">Cour Constitutionnelle</figcaption>
+        <div class="partner__meta">République démocratique du Congo</div>
+      </figure>
+      <figure class="partner">
+        <div class="partner__mark"><img src="assets/img/partners/if-entrepreneuriat.jpeg" alt="Logo I&amp;F Entrepreneuriat" width="110" height="150" loading="lazy" /></div>
+        <figcaption class="partner__name">I&amp;F Entrepreneuriat</figcaption>
+        <div class="partner__meta">Partenaire organisateur</div>
+      </figure>
+      <figure class="partner">
+        <div class="partner__mark"><img src="assets/img/partners/lexisnexis.png" alt="Logo LexisNexis — Academic &amp; Library Solutions" width="180" height="180" loading="lazy" /></div>
+        <figcaption class="partner__name">LexisNexis</figcaption>
+        <div class="partner__meta">Partenaire scientifique &amp; éditorial</div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA FINAL =================== -->
+<section class="section section--dark final-cta">
+  <div class="hero__maze" aria-hidden="true" style="opacity:.06"></div>
+  <div class="container reveal">
+    <p class="overline overline--center">Kinshasa · Septembre 2026</p>
+    <h2 class="display">Prenez part à un rendez-vous scientifique majeur.</h2>
+    <p>Rejoignez universitaires, magistrats et décideurs pour repenser l'ordre constitutionnel africain.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--lg" href="#inscription">S'inscrire</a>
+      <a class="btn btn--ghost-light btn--lg" href="#programme">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <img class="brand__logo brand__logo--footer" src="assets/img/aadp-logo.png" alt="Emblème de l'Académie Africaine de Droit Public" width="52" height="52" />
+          <span class="brand__text"><span class="brand__acr">AADP</span><span class="brand__full">Académie Africaine de Droit Public</span></span>
+        </div>
+        <p>1ʳᵉ Édition des Journées d'Étude — « Les Réformes Constitutionnelles en Afrique Noire Francophone ». Un espace scientifique dédié à la conduite des réformes constitutionnelles sur le continent.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer__list">
+          <li><a href="#presentation">Présentation</a></li>
+          <li><a href="#axes">Axes scientifiques</a></li>
+          <li><a href="#programme">Programme</a></li>
+          <li><a href="#intervenants">Intervenants</a></li>
+          <li><a href="#inscription">Inscription</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Événement</h4>
+        <ul class="footer__list">
+          <li>7 – 11 septembre 2026</li>
+          <li>Fleuve Congo Hôtel</li>
+          <li>Kinshasa, RD Congo</li>
+          <li><a href="#faq">Questions fréquentes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer__contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:contact@afdp.com">contact@afdp.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15a2 2 0 0 0 2-2v-2.5a1 1 0 0 0-.8-1l-3.4-.7a1 1 0 0 0-1 .3l-1 1.2A12 12 0 0 1 8.4 10l1.2-1a1 1 0 0 0 .3-1l-.7-3.4a1 1 0 0 0-1-.8H6a2 2 0 0 0-2 2Z"/></svg><a href="tel:+243000000000">+243 000 000 000</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><a href="https://www.afdp.com">www.afdp.com</a></li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5A1.94 1.94 0 1 1 3.06 5a1.94 1.94 0 0 1 3.88 0ZM3.4 8.5h3.1V21H3.4V8.5Zm5.06 0h2.97v1.7h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.7 2.06 3.7 4.74V21h-3.1v-5.55c0-1.32-.02-3.02-1.84-3.02-1.85 0-2.13 1.44-2.13 2.93V21H8.46V8.5Z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-6.6 7.5L21.8 21h-6.1l-4.3-5.6L6.4 21H3.4l7-8-6.7-10h6.2l3.9 5.2L17.5 3Zm-1 16.2h1.7L8.1 4.7H6.3l10.2 14.5Z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-1.9 0-3 1.4-3 3.2V11H8v3h3v7h3v-7h2.5l.5-3H14V9.3c0-.2.2-.3.4-.3H14Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Académie Africaine de Droit Public — Tous droits réservés.</span>
+      <span><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- =================== MODALES =================== -->
+<div class="modal" id="axisModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="axisModalTitle">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal__head"><p class="modal__eyebrow" id="axisModalKicker"></p><h3 class="modal__title" id="axisModalTitle"></h3></div>
+    <div class="modal__body">
+      <p class="modal__problem" id="axisModalProblem"></p>
+      <h4>Sous-thèmes</h4>
+      <ul class="modal__list" id="axisModalList"></ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="speakerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="speakerModalName">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal__head sp-modal__head">
+      <div class="sp-modal__avatar" id="spModalAvatar"></div>
+      <div>
+        <p class="modal__eyebrow" id="spModalField"></p>
+        <h3 class="modal__title" id="speakerModalName"></h3>
+        <p class="sp-modal__country" id="spModalCountry"></p>
+      </div>
+    </div>
+    <div class="modal__body">
+      <div class="sp-modal__field"><h4>Institution</h4><p id="spModalUniv"></p></div>
+      <div class="sp-modal__field"><h4>Biographie</h4><p id="spModalBio"></p></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/speakers-data.js"></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
