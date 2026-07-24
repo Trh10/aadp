@@ -135,7 +135,7 @@
   if (grid) {
     SPEAKERS.filter((sp) => sp.featured !== "president").forEach((sp, i) => {
       const btn = document.createElement("button");
-      btn.className = "speaker reveal" + (sp.featured === "exergue" ? " speaker--exergue" : "");
+      btn.className = "speaker reveal";
       btn.dataset.delay = String(i % 4);
       const pos = sp.pos ? ' style="object-position:center ' + sp.pos + '"' : "";
       const avatar = sp.photo

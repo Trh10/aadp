@@ -3,7 +3,6 @@
 
   const speakers = window.AADP_SPEAKERS || [];
   const grid = document.getElementById("intervenantsGrid");
-  const exergueGrid = document.getElementById("directionExergue");
   const modal = document.getElementById("speakerBioModal");
   if (!modal || !speakers.length) return;
 
@@ -69,42 +68,21 @@
     root.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   }
 
-  if (exergueGrid) {
-    speakers
-      .filter((sp) => sp.featured === "exergue")
-      .forEach((sp) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "exergue reveal";
-        btn.setAttribute("aria-label", "Voir la biographie de " + sp.name);
-        btn.innerHTML =
-          avatarHtml(sp) +
-          '<div class="exergue__body">' +
-          '<div class="exergue__role">' + (sp.field || "Direction de l'Académie") + "</div>" +
-          "<b>" + sp.name + "</b>" +
-          "<span>" + sp.univ + " · " + sp.country + "</span>" +
-          "</div>";
-        btn.addEventListener("click", () => openModal(sp));
-        exergueGrid.appendChild(btn);
-      });
-    observeReveal(exergueGrid);
-  }
-
   if (grid) {
     speakers
       .filter((sp) => !sp.featured)
       .forEach((sp) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "membre reveal";
-        btn.setAttribute("aria-label", "Voir la biographie de " + sp.name);
-        btn.innerHTML =
-          avatarHtml(sp) +
-          "<b>" + sp.name + "</b>" +
-          "<span>" + sp.univ + " · " + sp.country + "</span>";
-        btn.addEventListener("click", () => openModal(sp));
-        grid.appendChild(btn);
-      });
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "membre reveal";
+      btn.setAttribute("aria-label", "Voir la biographie de " + sp.name);
+      btn.innerHTML =
+        avatarHtml(sp) +
+        "<b>" + sp.name + "</b>" +
+        "<span>" + sp.univ + " · " + sp.country + "</span>";
+      btn.addEventListener("click", () => openModal(sp));
+      grid.appendChild(btn);
+    });
     observeReveal(grid);
   }
 
