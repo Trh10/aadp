@@ -81,6 +81,7 @@
 
   /* ---------- Données : Intervenants (sélection) ---------- */
   const SPEAKERS = window.AADP_SPEAKERS || [];
+  const asset = window.aadpAsset || function (p) { return p; };
 
   /* ---------- Utilitaires ---------- */
   const $ = (s, c) => (c || document).querySelector(s);
@@ -139,7 +140,7 @@
       btn.dataset.delay = String(i % 4);
       const pos = sp.pos ? ' style="object-position:center ' + sp.pos + '"' : "";
       const avatar = sp.photo
-        ? '<div class="speaker__avatar speaker__avatar--photo"><img src="' + sp.photo + '" alt="Portrait de ' + sp.name + '"' + pos + ' loading="lazy" width="120" height="120" /></div>'
+        ? '<div class="speaker__avatar speaker__avatar--photo"><img src="' + asset(sp.photo) + '" alt="Portrait de ' + sp.name + '"' + pos + ' loading="lazy" width="120" height="120" /></div>'
         : '<div class="speaker__avatar" aria-hidden="true">' + initials(sp.name) + "</div>";
       btn.innerHTML =
         avatar +
@@ -209,7 +210,7 @@
     if (sp.photo) {
       av.classList.add("sp-modal__avatar--photo");
       const pos = sp.pos ? ' style="object-position:center ' + sp.pos + '"' : "";
-      av.innerHTML = '<img src="' + sp.photo + '" alt="Portrait de ' + sp.name + '"' + pos + " />";
+      av.innerHTML = '<img src="' + asset(sp.photo) + '" alt="Portrait de ' + sp.name + '"' + pos + " />";
     } else {
       av.classList.remove("sp-modal__avatar--photo");
       av.textContent = initials(sp.name);

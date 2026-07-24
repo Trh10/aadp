@@ -657,7 +657,13 @@
   </div>
 </div>
 
-<script src="assets/js/speakers-data.js"></script>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/paths.js?v=20260724"></script>
+<script src="assets/js/speakers-data.js?v=20260724"></script>
+<script src="assets/js/main.js?v=20260724" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.aadpFixStaticAssets) window.aadpFixStaticAssets();
+});
+</script>
 </body>
 </html>

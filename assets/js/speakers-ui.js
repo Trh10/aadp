@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  const asset = window.aadpAsset || function (p) { return p; };
   const speakers = window.AADP_SPEAKERS || [];
   const grid = document.getElementById("intervenantsGrid");
   const modal = document.getElementById("speakerBioModal");
@@ -24,7 +25,7 @@
     if (sp.photo) {
       av.className = "bio-modal__avatar bio-modal__avatar--photo";
       const pos = sp.pos ? ' style="object-position:center ' + sp.pos + '"' : "";
-      av.innerHTML = '<img src="' + sp.photo + '" alt="Portrait de ' + sp.name + '"' + pos + " />";
+      av.innerHTML = '<img src="' + asset(sp.photo) + '" alt="Portrait de ' + sp.name + '"' + pos + " />";
     } else {
       av.className = "bio-modal__avatar";
       av.textContent = initials(sp.name);
@@ -49,7 +50,7 @@
   function avatarHtml(sp) {
     const pos = sp.pos ? ' style="object-position:center ' + sp.pos + '"' : "";
     return sp.photo
-      ? '<div class="avatar avatar--photo"><img src="' + sp.photo + '" alt=""' + pos + ' loading="lazy" /></div>'
+      ? '<div class="avatar avatar--photo"><img src="' + asset(sp.photo) + '" alt=""' + pos + ' loading="lazy" /></div>'
       : '<div class="avatar" aria-hidden="true">' + initials(sp.name) + "</div>";
   }
 

@@ -1139,9 +1139,11 @@ footer a:hover{color:var(--or-clair)}
   </div>
 </div>
 
-<script src="assets/js/speakers-data.js"></script>
-<script src="assets/js/speakers-ui.js"></script>
+<script src="assets/js/paths.js?v=20260724"></script>
+<script src="assets/js/speakers-data.js?v=20260724"></script>
+<script src="assets/js/speakers-ui.js?v=20260724"></script>
 <script>
+if (window.aadpFixStaticAssets) window.aadpFixStaticAssets();
 // Menu mobile
 const burger=document.getElementById('burger'),nav=document.getElementById('nav');
 burger.addEventListener('click',()=>{

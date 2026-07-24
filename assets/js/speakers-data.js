@@ -22,3 +22,8 @@ window.AADP_SPEAKERS = [
   { name: "M. Brozeck Kandolo", country: "RD Congo", univ: "Expert associé · AADP", field: "Constitutionnalisme numérique", photo: "assets/img/speakers/brozeck-kandolo.png", bio: "Expert associé de l'Académie, il intervient sur les réformes constitutionnelles à l'ère du numérique, notamment les enjeux d'intelligence artificielle, de souveraineté numérique et de protection des droits fondamentaux en Afrique." },
   { name: "Pr. Ngondankoy", country: "RD Congo", univ: "Université de Kinshasa", field: "Processus de réforme constitutionnelle", photo: "assets/img/speakers/ngondankoy.png", bio: "Professeur à l'Université de Kinshasa, il dirige les ateliers consacrés au processus de réforme constitutionnelle : diagnostic, propositions, opportunité et stratégie de mise en œuvre." }
 ];
+
+window.AADP_SPEAKERS = window.AADP_SPEAKERS.map(function (sp) {
+  if (sp.photo && window.aadpAsset) sp.photo = window.aadpAsset(sp.photo);
+  return sp;
+});
