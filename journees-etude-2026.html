@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260725-event" />
 
   <!-- SEO structured data -->
   <script type="application/ld+json">
@@ -45,18 +45,23 @@
   }
   </script>
 </head>
-<body>
+<body class="event-page">
 
 <!-- =================== HEADER =================== -->
 <header class="site-header" id="header">
   <div class="container">
     <nav class="nav" aria-label="Navigation principale">
-      <a class="brand" href="#accueil" aria-label="AADP — Académie Africaine de Droit Public, Accueil">
-        <img class="brand__logo" src="assets/img/aadp-logo.png" alt="Emblème de l'Académie Africaine de Droit Public" width="46" height="46" />
+      <a class="brand" href="index.html" aria-label="Retour au site institutionnel de l'AADP">
+        <img class="brand__logo" src="assets/img/aadp-logo.png" alt="Emblème de l'Académie Africaine de Droit Public" width="54" height="54" />
         <span class="brand__text">
           <span class="brand__acr">AADP</span>
-          <span class="brand__full">Droit Public</span>
+          <span class="brand__full">Site institutionnel</span>
         </span>
+      </a>
+
+      <a class="event-brand" href="#accueil" aria-label="Journées d'Étude 2026, accueil de l'événement">
+        <span class="event-brand__edition">1ʳᵉ édition</span>
+        <span class="event-brand__name">Journées d'Étude <b>2026</b></span>
       </a>
 
       <div class="nav__menu" id="navMenu">
@@ -81,79 +86,74 @@
 <main id="accueil">
 
 <!-- =================== HERO =================== -->
-<section class="hero">
+<section class="hero event-hero" aria-labelledby="eventTitle">
   <div class="hero__maze" aria-hidden="true"></div>
   <div class="hero__glow" aria-hidden="true"></div>
+  <div class="event-hero__grain" aria-hidden="true"></div>
   <div class="container">
-    <div class="hero__inner">
-      <div class="hero__copy">
-        <p class="hero__eyebrow">
-          <svg class="pillar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 9 L12 3 L21 9 Z M5 9 V18 M10 9 V18 M14 9 V18 M19 9 V18 M3 21 H21"/></svg>
-          1ʳᵉ Édition · Journées d'Étude de l'AADP
-        </p>
-        <h1 class="hero__title">Les Réformes Constitutionnelles<br><em>en Afrique Noire Francophone</em></h1>
-        <p class="hero__sub">Repenser l'ordre constitutionnel, garantir la stabilité, refonder l'État de droit.</p>
-
-        <div class="hero__meta">
-          <span class="hero__chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
-            7 au 11 septembre 2026
-          </span>
-          <span class="hero__chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            Fleuve Congo Hôtel · Kinshasa
-          </span>
+    <div class="event-hero__stage">
+      <div class="event-hero__copy">
+        <div class="event-kicker">
+          <span class="event-kicker__number">01</span>
+          <span><b>Première édition</b>Un rendez-vous scientifique de l'AADP</span>
         </div>
 
-        <div class="hero__actions">
+        <p class="event-hero__place"><span></span> Kinshasa · République démocratique du Congo</p>
+        <h1 class="event-hero__title" id="eventTitle">
+          <span>Journées d'Étude</span>
+          <strong>Les Réformes Constitutionnelles<br>en Afrique Noire Francophone</strong>
+        </h1>
+        <p class="event-hero__sub">Cinq journées pour comprendre, comparer et construire les réformes constitutionnelles africaines de demain.</p>
+
+        <div class="event-hero__facts" aria-label="Informations pratiques">
+          <div class="event-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+            <span><small>Dates</small><b>7 — 11 septembre 2026</b></span>
+          </div>
+          <div class="event-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span><small>Lieu</small><b>Fleuve Congo Hôtel</b></span>
+          </div>
+        </div>
+
+        <div class="hero__actions event-hero__actions">
           <a class="btn btn--primary btn--lg" href="#inscription">S'inscrire</a>
           <a class="btn btn--ghost-light btn--lg" href="#programme">
-            Découvrir le programme
+            Voir le programme
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Illustration : balance de la justice devant l'Afrique -->
-      <div class="hero__art" aria-hidden="true">
-        <svg viewBox="0 0 460 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#E9D5A6"/><stop offset="0.5" stop-color="#C79A3B"/><stop offset="1" stop-color="#9C7327"/>
-            </linearGradient>
-            <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#D9B25A"/><stop offset="1" stop-color="#B0842E"/>
-            </linearGradient>
-          </defs>
-          <!-- Carte de l'Afrique stylisée -->
-          <path d="M196 44c26-6 44 6 64 4 14-2 26-10 34 0 6 8-2 20 4 30 6 9 20 10 22 24 2 12-10 20-8 32 3 16 20 24 18 42-2 15-18 20-22 34-5 16 6 33-4 47-9 13-28 12-40 22-13 11-16 32-33 36-15 4-27-9-42-12-16-3-33 4-46-6-12-9-9-28-18-40-9-13-27-16-32-32-5-15 8-29 6-44-2-16-18-27-14-44 3-15 21-19 28-32 6-12 0-28 10-38 9-9 24-4 35-11 12-8 15-27 34-31Z" fill="url(#gold)" opacity="0.14" stroke="url(#gold)" stroke-width="1.4" stroke-opacity="0.6"/>
-          <path d="M196 44c26-6 44 6 64 4 14-2 26-10 34 0 6 8-2 20 4 30 6 9 20 10 22 24 2 12-10 20-8 32 3 16 20 24 18 42-2 15-18 20-22 34-5 16 6 33-4 47-9 13-28 12-40 22-13 11-16 32-33 36-15 4-27-9-42-12-16-3-33 4-46-6-12-9-9-28-18-40-9-13-27-16-32-32-5-15 8-29 6-44-2-16-18-27-14-44 3-15 21-19 28-32 6-12 0-28 10-38 9-9 24-4 35-11 12-8 15-27 34-31Z" fill="none" stroke="url(#gold)" stroke-width="0.6" stroke-dasharray="2 5" stroke-opacity="0.5"/>
-
-          <!-- Balance de la justice -->
-          <g stroke="url(#goldSoft)" stroke-width="2.4" stroke-linecap="round" fill="none">
-            <!-- Mât -->
-            <path d="M230 96 V360"/>
-            <!-- Pommeau -->
-            <circle cx="230" cy="90" r="7" fill="url(#gold)" stroke="none"/>
-            <!-- Fléau -->
-            <path d="M120 150 H340"/>
-            <!-- Suspentes gauche -->
-            <path d="M120 150 L96 214 M120 150 L144 214"/>
-            <!-- Suspentes droite -->
-            <path d="M340 150 L316 214 M340 150 L364 214"/>
-            <!-- Base -->
-            <path d="M188 360 H272 M200 360 c0 14 -8 20 -18 26 H308 c-10 -6 -18 -12 -18 -26"/>
-          </g>
-          <!-- Plateaux -->
-          <path d="M84 214 H156 c-4 26 -28 40 -36 40 s-32 -14 -36 -40Z" fill="url(#gold)" opacity="0.22" stroke="url(#goldSoft)" stroke-width="2"/>
-          <path d="M304 214 H376 c-4 26 -28 40 -36 40 s-32 -14 -36 -40Z" fill="url(#gold)" opacity="0.22" stroke="url(#goldSoft)" stroke-width="2"/>
-          <!-- Étoile / repère panafricain -->
-          <path d="M230 40 l3.2 6.6 7.3 1 -5.3 5.1 1.3 7.2 -6.5 -3.4 -6.5 3.4 1.3 -7.2 -5.3 -5.1 7.3 -1Z" fill="url(#gold)"/>
-        </svg>
+      <div class="event-hero__visual" aria-label="Emblème des Journées d'Étude">
+        <div class="event-orbit event-orbit--outer" aria-hidden="true"></div>
+        <div class="event-orbit event-orbit--inner" aria-hidden="true"></div>
+        <div class="event-hero__art">
+          <img src="assets/img/carte_afrique_avec_elemant_de_la_cour.png" alt="Carte dorée de l'Afrique portant une balance de la justice" width="760" height="860" />
+        </div>
+        <div class="event-seal" aria-hidden="true">
+          <span>07—11</span>
+          <small>Sept. 2026</small>
+        </div>
+        <div class="event-countdown" id="eventCountdown" aria-label="Compte à rebours avant les Journées d'Étude">
+          <p>Ouverture dans</p>
+          <div class="event-countdown__values">
+            <span><b id="countDays">--</b><small>jours</small></span>
+            <i>:</i>
+            <span><b id="countHours">--</b><small>heures</small></span>
+            <i>:</i>
+            <span><b id="countMinutes">--</b><small>min.</small></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="hero__scroll" aria-hidden="true"><span>Défiler</span><span class="line"></span></div>
+  <div class="event-hero__rail" aria-label="Caractéristiques de l'événement">
+    <span><b>05</b> journées intensives</span>
+    <span><b>05</b> axes scientifiques</span>
+    <span><b>20+</b> intervenants</span>
+    <span><b>01</b> certificat de participation</span>
+  </div>
 </section>
 
 <!-- =================== PRÉSENTATION =================== -->
@@ -659,7 +659,7 @@
 
 <script src="assets/js/paths.js?v=20260725"></script>
 <script src="assets/js/speakers-data.js?v=20260725"></script>
-<script src="assets/js/main.js?v=20260725" defer></script>
+<script src="assets/js/main.js?v=20260725-event" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   if (window.aadpFixStaticAssets) window.aadpFixStaticAssets();

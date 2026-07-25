@@ -254,5 +254,37 @@
     });
   }
 
+  /* ---------- Compte à rebours de l'événement ---------- */
+  const countdown = $("#eventCountdown");
+  if (countdown) {
+    const start = new Date("2026-09-07T09:00:00+01:00").getTime();
+    const end = new Date("2026-09-11T18:00:00+01:00").getTime();
+    const days = $("#countDays");
+    const hours = $("#countHours");
+    const minutes = $("#countMinutes");
+
+    const renderCountdown = () => {
+      const now = Date.now();
+      if (now >= start) {
+        countdown.innerHTML = now <= end
+          ? "<p>Événement en cours</p><strong>Bienvenue aux Journées d'Étude de l'AADP</strong>"
+          : "<p>Première édition</p><strong>Merci à toutes et à tous pour votre participation</strong>";
+        return false;
+      }
+
+      const remaining = start - now;
+      const dayValue = Math.floor(remaining / 86400000);
+      const hourValue = Math.floor((remaining % 86400000) / 3600000);
+      const minuteValue = Math.floor((remaining % 3600000) / 60000);
+      days.textContent = String(dayValue).padStart(2, "0");
+      hours.textContent = String(hourValue).padStart(2, "0");
+      minutes.textContent = String(minuteValue).padStart(2, "0");
+      countdown.setAttribute("aria-label", `Ouverture dans ${dayValue} jours, ${hourValue} heures et ${minuteValue} minutes`);
+      return true;
+    };
+
+    if (renderCountdown()) window.setInterval(renderCountdown, 60000);
+  }
+
   /* ---------- Année dynamique déjà fixée à 2026 dans le footer ---------- */
 })();
